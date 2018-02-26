@@ -1,0 +1,715 @@
+  [1m[36m (13.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (11.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateRigaComandas (20180225113425)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateComandas (20180225113545)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "comandas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "data" date, "tavolo" integer, "id_user" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20180225113545"]]
+  [1m[36m (14.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateProdottos (20180225113601)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateProdottos (20180225113601)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateRigaComandas (20180225113718)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCatProdottos (20180225113753)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "cat_prodottos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "desciption" text, "id_parent" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20180225113753"]]
+  [1m[36m (13.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreateProdottos (20180225113839)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "prodottos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "descrizione" text, "id_cat" integer, "prezzo" float, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20180225113839"]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateRigaComandas (20180225113942)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "riga_comandas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "id_comanda" integer, "id_prodotto" integer, "quantit" integer, "modifiche" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20180225113942"]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 2.34.227.137 at 2018-02-25 11:40:46 +0000
+Cannot render console from 2.34.227.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (4.3ms)
+Completed 200 OK in 47ms (Views: 31.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/prodottos" for 2.34.227.137 at 2018-02-25 11:40:56 +0000
+Cannot render console from 2.34.227.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProdottosController#index as HTML
+  [1m[35mProdotto Load (0.3ms)[0m  SELECT "prodottos".* FROM "prodottos"
+  Rendered prodottos/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 1139ms (Views: 1136.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/comandas.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 2.34.227.137 at 2018-02-25 11:40:57 +0000
+Cannot render console from 2.34.227.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/riga_comandas.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 2.34.227.137 at 2018-02-25 11:40:57 +0000
+Cannot render console from 2.34.227.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 2.34.227.137 at 2018-02-25 11:40:57 +0000
+Cannot render console from 2.34.227.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cat_prodottos.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 2.34.227.137 at 2018-02-25 11:40:57 +0000
+Cannot render console from 2.34.227.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/prodottos.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 2.34.227.137 at 2018-02-25 11:40:57 +0000
+Cannot render console from 2.34.227.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cat_prodottos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 2.34.227.137 at 2018-02-25 11:40:57 +0000
+Cannot render console from 2.34.227.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-d2e5ccad1506299feea3a35bfb7c525e101bb3b214303715deb675fdc539948b.css?body=1" for 2.34.227.137 at 2018-02-25 11:40:58 +0000
+Cannot render console from 2.34.227.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 2.34.227.137 at 2018-02-25 11:40:58 +0000
+Cannot render console from 2.34.227.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 2.34.227.137 at 2018-02-25 11:40:58 +0000
+Cannot render console from 2.34.227.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/prodottos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 2.34.227.137 at 2018-02-25 11:40:58 +0000
+Cannot render console from 2.34.227.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/riga_comandas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 2.34.227.137 at 2018-02-25 11:40:58 +0000
+Cannot render console from 2.34.227.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 2.34.227.137 at 2018-02-25 11:40:58 +0000
+Cannot render console from 2.34.227.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 2.34.227.137 at 2018-02-25 11:40:58 +0000
+Cannot render console from 2.34.227.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/comandas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 2.34.227.137 at 2018-02-25 11:40:58 +0000
+Cannot render console from 2.34.227.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20180225114253)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (6.4ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20180225114253"]]
+  [1m[36m (17.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+
+
+Started GET "/prodottos" for 2.34.227.137 at 2018-02-25 11:43:30 +0000
+Cannot render console from 2.34.227.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+NoMethodError (undefined method `devise_for' for #<ActionDispatch::Routing::Mapper:0x007fea4d10ca68>):
+  config/routes.rb:2:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (41.7ms)
+
+
+Started GET "/prodottos" for 2.34.227.137 at 2018-02-25 11:44:45 +0000
+Cannot render console from 2.34.227.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+NoMethodError (undefined method `authenticated' for #<ActionDispatch::Routing::Mapper:0x007fea4d6fec50>):
+  config/routes.rb:3:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (54.8ms)
+
+
+Started GET "/prodottos" for 2.34.227.137 at 2018-02-25 11:45:15 +0000
+Cannot render console from 2.34.227.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+NoMethodError (undefined method `authenticated' for #<ActionDispatch::Routing::Mapper:0x007fea4cd52738>):
+  config/routes.rb:3:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.7ms)
+
+
+Started GET "/prodottos" for 2.34.227.137 at 2018-02-25 11:46:26 +0000
+Cannot render console from 2.34.227.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+NoMethodError (undefined method `authenticated' for #<ActionDispatch::Routing::Mapper:0x007fea4ccbb9f0>):
+  config/routes.rb:3:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.9ms)
+
+
+Started GET "/prodottos" for 2.34.227.137 at 2018-02-25 11:46:47 +0000
+Cannot render console from 2.34.227.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+NoMethodError (undefined method `authenticated' for #<ActionDispatch::Routing::Mapper:0x007fea4e1d3d88>):
+  config/routes.rb:3:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.0ms)
+
+
+Started GET "/prodottos" for 2.34.227.137 at 2018-02-25 11:48:21 +0000
+Cannot render console from 2.34.227.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+NoMethodError (undefined method `authenticated' for #<ActionDispatch::Routing::Mapper:0x007fea4dc8a818>):
+  config/routes.rb:3:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.4ms)
+
+
+Started GET "/prodottos" for 188.216.192.20 at 2018-02-25 15:08:48 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProdottosController#index as HTML
+Completed 401 Unauthorized in 30ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 188.216.192.20 at 2018-02-25 15:08:48 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/devise-4.4.1/app/views/devise/shared/_links.html.erb (10.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/devise-4.4.1/app/views/devise/sessions/new.html.erb within layouts/application (123.1ms)
+Completed 200 OK in 523ms (Views: 511.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/sign_up" for 188.216.192.20 at 2018-02-25 15:09:27 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/devise-4.4.1/app/views/devise/shared/_links.html.erb (4.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/devise-4.4.1/app/views/devise/registrations/new.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 47ms (Views: 45.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 188.216.192.20 at 2018-02-25 15:09:56 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tg2Zkg1BvhE1njHdCVMeKbEnEmAfrRRA7hz4lwH0u2LiGOc/PP0rMrTfa6l1t+9JudkC7k/nga+ezSbOk8bs7w==", "user"=>{"email"=>"filippo.luppi@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'filippo.luppi@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "filippo.luppi@gmail.com"], ["encrypted_password", "$2a$11$fLndSo9LvKGQfRDsBn4fmuFFwC7dSfcYsAdXn.E1T6CqXD9RiaKci"], ["created_at", "2018-02-25 15:09:57.046975"], ["updated_at", "2018-02-25 15:09:57.046975"]]
+  [1m[36m (10.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.7ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2018-02-25 15:09:57.062765"], ["current_sign_in_at", "2018-02-25 15:09:57.062765"], ["last_sign_in_ip", "188.216.192.20"], ["current_sign_in_ip", "188.216.192.20"], ["sign_in_count", 1], ["updated_at", "2018-02-25 15:09:57.064611"], ["id", 1]]
+  [1m[35m (9.9ms)[0m  commit transaction
+Redirected to https://birra-balus-filippo95.c9users.io/prodottos
+Completed 302 Found in 265ms (ActiveRecord: 22.9ms)
+
+
+Started GET "/prodottos" for 188.216.192.20 at 2018-02-25 15:09:57 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProdottosController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mProdotto Load (0.2ms)[0m  SELECT "prodottos".* FROM "prodottos"
+  Rendered prodottos/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 63ms (Views: 55.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/prodottos" for 188.216.192.20 at 2018-02-25 20:01:35 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProdottosController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProdotto Load (0.2ms)[0m  [1mSELECT "prodottos".* FROM "prodottos"[0m
+  Rendered prodottos/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 480ms (Views: 422.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/prodottos" for 188.216.192.20 at 2018-02-25 20:05:02 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProdottosController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProdotto Load (0.2ms)[0m  [1mSELECT "prodottos".* FROM "prodottos"[0m
+  Rendered prodottos/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 31ms (Views: 28.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/prodottos" for 188.216.192.20 at 2018-02-25 20:14:56 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProdottosController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProdotto Load (0.3ms)[0m  [1mSELECT "prodottos".* FROM "prodottos"[0m
+  Rendered prodottos/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 71ms (Views: 67.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/prodottos" for 188.216.192.20 at 2018-02-25 20:17:27 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProdottosController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProdotto Load (0.2ms)[0m  [1mSELECT "prodottos".* FROM "prodottos"[0m
+  Rendered prodottos/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 68ms (Views: 65.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/prodottos" for 188.216.192.20 at 2018-02-25 20:19:43 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProdottosController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProdotto Load (0.2ms)[0m  [1mSELECT "prodottos".* FROM "prodottos"[0m
+  Rendered prodottos/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 38ms (Views: 35.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/prodottos" for 188.216.192.20 at 2018-02-25 20:20:25 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProdottosController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProdotto Load (0.4ms)[0m  [1mSELECT "prodottos".* FROM "prodottos"[0m
+  Rendered prodottos/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 29ms (Views: 26.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/prodottos" for 188.216.192.20 at 2018-02-25 20:21:18 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProdottosController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProdotto Load (0.2ms)[0m  [1mSELECT "prodottos".* FROM "prodottos"[0m
+  Rendered prodottos/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 29ms (Views: 26.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/prodottos" for 188.216.192.20 at 2018-02-25 20:21:50 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProdottosController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProdotto Load (0.2ms)[0m  [1mSELECT "prodottos".* FROM "prodottos"[0m
+  Rendered prodottos/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 34ms (Views: 31.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/prodottos" for 188.216.192.20 at 2018-02-25 20:22:38 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProdottosController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProdotto Load (0.2ms)[0m  [1mSELECT "prodottos".* FROM "prodottos"[0m
+  Rendered prodottos/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/prodottos" for 188.216.192.20 at 2018-02-25 20:23:00 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProdottosController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProdotto Load (0.2ms)[0m  [1mSELECT "prodottos".* FROM "prodottos"[0m
+  Rendered prodottos/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 24ms (Views: 21.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/prodottos" for 188.216.192.20 at 2018-02-25 20:25:06 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProdottosController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProdotto Load (0.2ms)[0m  [1mSELECT "prodottos".* FROM "prodottos"[0m
+  Rendered prodottos/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 25ms (Views: 22.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/prodottos" for 188.216.192.20 at 2018-02-25 20:30:19 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProdottosController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProdotto Load (0.3ms)[0m  [1mSELECT "prodottos".* FROM "prodottos"[0m
+  Rendered prodottos/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 26ms (Views: 22.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/prodottos" for 188.216.192.20 at 2018-02-25 20:34:16 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProdottosController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProdotto Load (0.2ms)[0m  [1mSELECT "prodottos".* FROM "prodottos"[0m
+  Rendered prodottos/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 23ms (Views: 20.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/prodottos" for 188.216.192.20 at 2018-02-25 20:36:01 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProdottosController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProdotto Load (0.2ms)[0m  [1mSELECT "prodottos".* FROM "prodottos"[0m
+  Rendered prodottos/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 25ms (Views: 22.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/prodottos" for 188.216.192.20 at 2018-02-25 20:42:45 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProdottosController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProdotto Load (0.2ms)[0m  [1mSELECT "prodottos".* FROM "prodottos"[0m
+  Rendered prodottos/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 29ms (Views: 26.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/prodottos" for 188.216.192.20 at 2018-02-25 20:43:02 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProdottosController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProdotto Load (0.3ms)[0m  [1mSELECT "prodottos".* FROM "prodottos"[0m
+  Rendered prodottos/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 37ms (Views: 34.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/prodottos" for 188.216.192.20 at 2018-02-25 20:43:06 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProdottosController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProdotto Load (0.2ms)[0m  [1mSELECT "prodottos".* FROM "prodottos"[0m
+  Rendered prodottos/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 43ms (Views: 40.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/prodottos" for 188.216.192.20 at 2018-02-25 20:43:29 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProdottosController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProdotto Load (0.2ms)[0m  [1mSELECT "prodottos".* FROM "prodottos"[0m
+  Rendered prodottos/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 25ms (Views: 22.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/prodottos" for 188.216.192.20 at 2018-02-25 20:43:32 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProdottosController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProdotto Load (0.2ms)[0m  [1mSELECT "prodottos".* FROM "prodottos"[0m
+  Rendered prodottos/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/prodottos" for 188.216.192.20 at 2018-02-25 20:45:02 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProdottosController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProdotto Load (0.2ms)[0m  [1mSELECT "prodottos".* FROM "prodottos"[0m
+  Rendered prodottos/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 63ms (Views: 60.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/scaffolds.self-4223d992508804143b5544c54348f306a7dc9d09bf8eaaa35b13f7cf10a4884b.css?body=1" for 188.216.192.20 at 2018-02-25 20:45:03 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/prodottos" for 188.216.192.20 at 2018-02-25 20:45:54 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProdottosController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProdotto Load (0.2ms)[0m  [1mSELECT "prodottos".* FROM "prodottos"[0m
+  Rendered prodottos/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/prodottos" for 188.216.192.20 at 2018-02-25 21:30:03 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProdottosController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProdotto Load (0.3ms)[0m  [1mSELECT "prodottos".* FROM "prodottos"[0m
+  Rendered prodottos/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 33ms (Views: 27.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/prodottos" for 188.216.192.20 at 2018-02-25 21:30:31 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProdottosController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProdotto Load (0.3ms)[0m  [1mSELECT "prodottos".* FROM "prodottos"[0m
+  Rendered prodottos/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 26ms (Views: 23.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/prodottos" for 188.216.192.20 at 2018-02-25 21:30:31 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProdottosController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProdotto Load (0.2ms)[0m  [1mSELECT "prodottos".* FROM "prodottos"[0m
+  Rendered prodottos/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 23ms (Views: 19.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/prodottos" for 188.216.192.20 at 2018-02-25 21:32:52 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProdottosController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProdotto Load (0.3ms)[0m  [1mSELECT "prodottos".* FROM "prodottos"[0m
+  Rendered prodottos/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 35ms (Views: 32.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/prodottos" for 188.216.192.20 at 2018-02-25 21:34:21 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProdottosController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProdotto Load (0.2ms)[0m  [1mSELECT "prodottos".* FROM "prodottos"[0m
+  Rendered prodottos/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 28ms (Views: 25.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/prodottos" for 188.216.192.20 at 2018-02-25 21:34:38 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProdottosController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProdotto Load (0.2ms)[0m  [1mSELECT "prodottos".* FROM "prodottos"[0m
+  Rendered prodottos/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/prodottos" for 188.216.192.20 at 2018-02-25 21:36:01 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProdottosController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProdotto Load (0.2ms)[0m  [1mSELECT "prodottos".* FROM "prodottos"[0m
+  Rendered prodottos/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/prodottos" for 188.216.192.20 at 2018-02-25 21:36:06 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProdottosController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProdotto Load (0.2ms)[0m  [1mSELECT "prodottos".* FROM "prodottos"[0m
+  Rendered prodottos/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 28ms (Views: 25.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/comandas" for 188.216.192.20 at 2018-02-25 21:36:16 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ComandasController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mComanda Load (0.3ms)[0m  [1mSELECT "comandas".* FROM "comandas"[0m
+  Rendered comandas/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 37ms (Views: 28.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/comandas/new" for 188.216.192.20 at 2018-02-25 21:36:18 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ComandasController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered comandas/_form.html.erb (140.9ms)
+  Rendered comandas/new.html.erb within layouts/application (152.3ms)
+Completed 200 OK in 186ms (Views: 179.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 188.216.192.20 at 2018-02-25 21:36:38 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Processing by ProdottosController#index as HTML
+  [1m[35mProdotto Load (0.3ms)[0m  SELECT "prodottos".* FROM "prodottos"
+  Rendered prodottos/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 21ms (Views: 20.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/comandas/new" for 188.216.192.20 at 2018-02-25 21:36:39 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ComandasController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered comandas/_form.html.erb (2.9ms)
+  Rendered comandas/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 35ms (Views: 32.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/comandas/new" for 188.216.192.20 at 2018-02-25 21:42:26 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ComandasController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered comandas/_form.html.erb (12.3ms)
+  Rendered comandas/new.html.erb within layouts/application (13.2ms)
+Completed 401 Unauthorized in 18ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `merge' for 1:Fixnum):
+    21:   </div>
+    22:   <div class="field">
+    23:     <%= f.label :id_user %><br>
+    24:     <%= f.number_field :id_user ,current_user.id %>
+    25:   </div>
+    26:   <div class="actions">
+    27:     <%= f.submit %>
+  app/views/comandas/_form.html.erb:24:in `block in _app_views_comandas__form_html_erb___1090413181087686037_69980302034000'
+  app/views/comandas/_form.html.erb:1:in `_app_views_comandas__form_html_erb___1090413181087686037_69980302034000'
+  app/views/comandas/new.html.erb:3:in `_app_views_comandas_new_html_erb___1282834981474942422_69980295548160'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (47.2ms)
+
+
+Started GET "/comandas/new" for 188.216.192.20 at 2018-02-25 21:43:05 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ComandasController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered comandas/_form.html.erb (3.7ms)
+  Rendered comandas/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 37ms (Views: 34.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/comandas/new" for 188.216.192.20 at 2018-02-25 21:43:39 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ComandasController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered comandas/_form.html.erb (7.2ms)
+  Rendered comandas/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 32ms (Views: 29.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/comandas/new" for 188.216.192.20 at 2018-02-25 21:44:16 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ComandasController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered comandas/_form.html.erb (2.9ms)
+  Rendered comandas/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 28ms (Views: 25.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/comandas" for 188.216.192.20 at 2018-02-25 21:45:55 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ComandasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vOf1WQ+doEzBKIRhp12o9hLrseWdJU01EyqBe5vhf2EQ8ov0PiE1b0Bp3hXbuVmWGhWha81v2Npj+18iCdMo7A==", "comanda"=>{"data(1i)"=>"2018", "data(2i)"=>"2", "data(3i)"=>"25", "tavolo"=>"12", "id_user"=>"1"}, "commit"=>"Create Comanda"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "comandas" ("tavolo", "id_user", "data", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["tavolo", 12], ["id_user", 1], ["data", "2018-02-25"], ["created_at", "2018-02-25 21:45:55.748519"], ["updated_at", "2018-02-25 21:45:55.748519"]]
+  [1m[36m (11.3ms)[0m  [1mcommit transaction[0m
+Redirected to https://birra-balus-filippo95.c9users.io/comandas/1
+Completed 302 Found in 18ms (ActiveRecord: 12.2ms)
+
+
+Started GET "/comandas/1" for 188.216.192.20 at 2018-02-25 21:45:56 +0000
+Cannot render console from 188.216.192.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ComandasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mComanda Load (0.3ms)[0m  [1mSELECT  "comandas".* FROM "comandas" WHERE "comandas"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered comandas/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 31ms (Views: 23.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/prodottos" for 2.34.227.137 at 2018-02-26 00:02:06 +0000
+Cannot render console from 2.34.227.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProdottosController#index as HTML
+  [1m[35mUser Load (2.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProdotto Load (0.5ms)[0m  [1mSELECT "prodottos".* FROM "prodottos"[0m
+  Rendered prodottos/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 78ms (Views: 62.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/comandas/1" for 2.34.227.137 at 2018-02-26 00:02:43 +0000
+Cannot render console from 2.34.227.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ComandasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mComanda Load (0.2ms)[0m  [1mSELECT  "comandas".* FROM "comandas" WHERE "comandas"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered comandas/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 44ms (Views: 40.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/comandas/1" for 2.34.227.137 at 2018-02-26 00:02:46 +0000
+Cannot render console from 2.34.227.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ComandasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mComanda Load (0.1ms)[0m  [1mSELECT  "comandas".* FROM "comandas" WHERE "comandas"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered comandas/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 31ms (Views: 28.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/comandas/1" for 2.34.227.137 at 2018-02-26 00:02:54 +0000
+Cannot render console from 2.34.227.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ComandasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mComanda Load (0.1ms)[0m  [1mSELECT  "comandas".* FROM "comandas" WHERE "comandas"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered comandas/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 33ms (Views: 29.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/comandas/1" for 2.34.227.137 at 2018-02-26 00:04:40 +0000
+Cannot render console from 2.34.227.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ComandasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mComanda Load (0.1ms)[0m  [1mSELECT  "comandas".* FROM "comandas" WHERE "comandas"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered comandas/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 46ms (Views: 42.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/comandas/1" for 2.34.227.137 at 2018-02-26 00:06:14 +0000
+Cannot render console from 2.34.227.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ComandasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mComanda Load (0.1ms)[0m  [1mSELECT  "comandas".* FROM "comandas" WHERE "comandas"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered comandas/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 28ms (Views: 24.0ms | ActiveRecord: 0.4ms)

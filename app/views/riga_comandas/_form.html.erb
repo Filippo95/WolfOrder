@@ -1,0 +1,33 @@
+<%= form_for(@riga_comanda) do |f| %>
+  <% if @riga_comanda.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@riga_comanda.errors.count, "error") %> prohibited this riga_comanda from being saved:</h2>
+
+      <ul>
+      <% @riga_comanda.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id_comanda %><br>
+    <%= f.number_field :id_comanda %>
+  </div>
+  <div class="field">
+    <%= f.label :id_prodotto %><br>
+    <%= f.number_field :id_prodotto %>
+  </div>
+  <div class="field">
+    <%= f.label :quantit %><br>
+    <%= f.number_field :quantit %>
+  </div>
+  <div class="field">
+    <%= f.label :modifiche %><br>
+    <%= f.text_area :modifiche %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

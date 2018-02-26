@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  data: 2018-02-25
+  tavolo: 1
+  id_user: 1
+
+two:
+  data: 2018-02-25
+  tavolo: 1
+  id_user: 1

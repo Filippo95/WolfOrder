@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_comanda: 1
+  id_prodotto: 1
+  quantit: 1
+  modifiche: MyText
+
+two:
+  id_comanda: 1
+  id_prodotto: 1
+  quantit: 1
+  modifiche: MyText

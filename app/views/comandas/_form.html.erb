@@ -1,0 +1,28 @@
+<%= form_for(@comanda) do |f| %>
+  <% if @comanda.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@comanda.errors.count, "error") %> prohibited this comanda from being saved:</h2>
+
+      <ul>
+      <% @comanda.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :data %><br>
+    <%= f.date_select :data %>
+  </div>
+  <div class="field">
+    <%= f.label :tavolo %><br>
+    <%= f.number_field :tavolo %>
+  </div>
+  <div class="field">
+    <%= f.hidden_field :id_user , :value =>current_user.id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

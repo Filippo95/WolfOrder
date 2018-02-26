@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id comanda:</strong>
+  <%= @riga_comanda.id_comanda %>
+</p>
+
+<p>
+  <strong>Id prodotto:</strong>
+  <%= @riga_comanda.id_prodotto %>
+</p>
+
+<p>
+  <strong>Quantit:</strong>
+  <%= @riga_comanda.quantit %>
+</p>
+
+<p>
+  <strong>Modifiche:</strong>
+  <%= @riga_comanda.modifiche %>
+</p>
+
+<%= link_to 'Edit', edit_riga_comanda_path(@riga_comanda) %> |
+<%= link_to 'Back', riga_comandas_path %>
