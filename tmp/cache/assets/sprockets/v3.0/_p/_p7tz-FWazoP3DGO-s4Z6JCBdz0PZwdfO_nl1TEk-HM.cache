@@ -1,0 +1,26 @@
+{:uriI"±file://app/assets/bower_components/bootstrap-datepicker/docs/_screenshots/option_todaybtn.html?type=text/html&id=ddd4a3eb1f78c27d49fe3bf1043dd367045c8f2613afbdcec7a24055d2619ee9:ET:load_pathI" app/assets/bower_components;T:filenameI"\app/assets/bower_components/bootstrap-datepicker/docs/_screenshots/option_todaybtn.html;T:	nameI";bootstrap-datepicker/docs/_screenshots/option_todaybtn;T:logical_pathI"@bootstrap-datepicker/docs/_screenshots/option_todaybtn.html;T:content_typeI"text/html;T:sourceI"B<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="script/common.css">
+        <script src="script/common.js"></script>
+        <script>
+            function setup(){
+                $('input').datepicker({
+                    todayBtn: true
+                });
+            }
+        </script>
+    </head>
+    <body data-capture="input, .datepicker">
+        <div class="row">
+            <div class="col-sm-offset-4 col-sm-3">
+                <input type="text" class="form-control" value="03/03/2013">
+            </div>
+        </div>
+    </body>
+</html>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"jfile-digest://app/assets/bower_components/bootstrap-datepicker/docs/_screenshots/option_todaybtn.html;TTF:charsetI"
+utf-8;F:digest"%Éõ‹şégÌº§nÂ_h(šÙœ¯íf¯”ÁÚİ:lengthiB:dependencies_digest"% ç:‰¼öšğÔF1á¦€„ˆn`¢B—’‡«y9:idI"Eddd4a3eb1f78c27d49fe3bf1043dd367045c8f2613afbdcec7a24055d2619ee9;F:
+mtimel+şçZ

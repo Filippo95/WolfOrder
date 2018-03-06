@@ -1,0 +1,18 @@
+{:uriI"—file://app/assets/bower_components/eve-raphael/component.json?type=application/json&id=519387e1ad07ceaca45a47e4e3031f519ac5782b401ddec44c92153f6184f1a8:ET:load_pathI" app/assets/bower_components;T:filenameI";app/assets/bower_components/eve-raphael/component.json;T:	nameI"eve-raphael/component;T:logical_pathI"eve-raphael/component.json;T:content_typeI"application/json;T:sourceI"é{
+  "name": "eve",
+  "repo": "adobe-webplatform/eve",
+  "description": "Custom Events",
+  "version": "0.5.0",
+  "keywords": ["events"],
+  "dependencies": {},
+  "development": {},
+  "main": "eve.js",
+  "scripts": [
+    "eve.js"
+  ]
+}
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"@processors:type=application/json&file_type=application/json;TTI"Ifile-digest://app/assets/bower_components/eve-raphael/component.json;TTF:charsetI"
+utf-8;F:digest"%ú±òÌ¥W>«è-ï±»zaÆöõ3œ&/Ñ°E:lengthié:dependencies_digest"%R/0?ß(7˜0£õ{dşâ½“ÖEÔuëx¹¥×:idI"E519387e1ad07ceaca45a47e4e3031f519ac5782b401ddec44c92153f6184f1a8;F:
+mtimel+ğæZ

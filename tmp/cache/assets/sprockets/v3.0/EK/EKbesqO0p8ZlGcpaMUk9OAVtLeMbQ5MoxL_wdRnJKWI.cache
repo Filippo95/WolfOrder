@@ -1,0 +1,74 @@
+{:uriI"”file://app/assets/bower_components/jquery-ui/composer.json?type=application/json&id=e7112aa5174ad73144f54346a72a905b45d1dcb0f4a1ffb38c14145b570a7a5a:ET:load_pathI" app/assets/bower_components;T:filenameI"8app/assets/bower_components/jquery-ui/composer.json;T:	nameI"jquery-ui/composer;T:logical_pathI"jquery-ui/composer.json;T:content_typeI"application/json;T:sourceI"#{
+    "name": "components/jqueryui",
+    "type": "component",
+    "description": "jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library. Whether you're building highly interactive web applications or you just need to add a date picker to a form control, jQuery UI is the perfect choice.",
+    "license": "MIT",
+    "require": {
+        "components/jquery": ">=1.6"
+    },
+    "authors": [
+        {
+            "name": "jQuery UI Team",
+            "homepage": "http://jqueryui.com/about"
+        },
+        {
+            "name": "Scott Gonzalez",
+            "email": "scott.gonzalez@gmail.com",
+            "homepage": "http://scottgonzalez.com"
+        },
+        {
+            "name": "Joern Zaefferer",
+            "email": "joern.zaefferer@gmail.com",
+            "homepage": "http://bassistance.de"
+        },
+        {
+            "name": "Kris Borchers",
+            "email": "kris.borchers@gmail.com",
+            "homepage": "http://krisborchers.com"
+        },
+        {
+            "name": "Corey Frang",
+            "email": "gnarf37@gmail.com",
+            "homepage": "http://gnarf.net"
+        },
+        {
+            "name": "Mike Sherov",
+            "email": "mike.sherov@gmail.com",
+            "homepage": "http://mike.sherov.com"
+        },
+        {
+            "name": "TJ VanToll",
+            "email": "tj.vantoll@gmail.com",
+            "homepage": "http://tjvantoll.com"
+        },
+        {
+            "name": "Felix Nagel",
+            "email": "info@felixnagel.com",
+            "homepage": "http://www.felixnagel.com"
+        }
+    ],
+    "extra": {
+        "component": {
+            "name": "jquery-ui",
+            "scripts": [
+                "jquery-ui.js"
+            ],
+            "files": [
+                "ui/**",
+                "themes/**",
+                "jquery-ui.min.js"
+            ],
+            "shim": {
+                "deps": [
+                    "jquery"
+                ],
+                "exports": "jQuery"
+            }
+        }
+    }
+}
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"@processors:type=application/json&file_type=application/json;TTI"Ffile-digest://app/assets/bower_components/jquery-ui/composer.json;TTF:charsetI"
+utf-8;F:digest"%“pà*H»&ó¸¢éAëd¥Œ8@t;·O¥K:lengthi#:dependencies_digest"%âX5ŠèÉ0¨)>›±ª.êí}CCŒØæ©cêø:idI"Ee7112aa5174ad73144f54346a72a905b45d1dcb0f4a1ffb38c14145b570a7a5a;F:
+mtimel+.èZ

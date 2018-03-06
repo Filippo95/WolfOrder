@@ -1,0 +1,29 @@
+{:uriI"»file://app/assets/bower_components/bootstrap-datepicker/docs/_screenshots/option_daysofweekdisabled.html?type=text/html&id=3e3ab51f3b2cd1d6632c24d90bf9753816d8bb886871262fd985b2cfd2a0d2f8:ET:load_pathI" app/assets/bower_components;T:filenameI"fapp/assets/bower_components/bootstrap-datepicker/docs/_screenshots/option_daysofweekdisabled.html;T:	nameI"Ebootstrap-datepicker/docs/_screenshots/option_daysofweekdisabled;T:logical_pathI"Jbootstrap-datepicker/docs/_screenshots/option_daysofweekdisabled.html;T:content_typeI"text/html;T:sourceI"x<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="script/common.css">
+        <script src="script/common.js"></script>
+        <script>
+            function setup(){
+                $('input').datepicker({
+                    format: 'mm-dd-yyyy',
+                    daysOfWeekDisabled: [0, 6]
+                });
+            }
+        </script>
+    </head>
+    <body data-capture="input, .datepicker">
+        <div class="row">
+            <div class="col-sm-offset-4 col-sm-3">
+                <input type="text" class="form-control" value="03-05-2013">
+            </div>
+        </div>
+    </body>
+</html>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"tfile-digest://app/assets/bower_components/bootstrap-datepicker/docs/_screenshots/option_daysofweekdisabled.html;TTF:charsetI"
+utf-8;F:digest"%óšÔ®Šê¸(*(¦{
+ï<`yò¨Àüö*JN¶::lengthix:dependencies_digest"%4;ã
+1E$…ûtSdŸ%$ùìä“}(L|ì“à×Ú‹:idI"E3e3ab51f3b2cd1d6632c24d90bf9753816d8bb886871262fd985b2cfd2a0d2f8;F:
+mtimel+þçZ

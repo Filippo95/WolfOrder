@@ -20,14 +20,73 @@
     <%= f.text_area :descrizione %>
   </div>
   <div class="field">
-    <%= f.label :id_cat %><br>
-    <%= f.number_field :id_cat %>
+     <label for="prodotto_id_cat">Categoria</label><br>
+     <input type="text" id="ccv" disabled="disabled">
+        <%= f.hidden_field :id_cat, id: :prodotto_id_cat%>
+    
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalA">
+            Seleziona Categoria
+          </button>
   </div>
+  
+  
+  
+  
+  
+  
   <div class="field">
     <%= f.label :prezzo %><br>
     <%= f.text_field :prezzo %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit  class:'btn btn-primary'%>
   </div>
 <% end %>
+ <div class="modal fade" id="exampleModalA" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Seleziona Categoria</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <script>
+              function Dispose1( id, nome){
+                $('#prodotto_id_cat').val(id);
+        console.log(id)
+                  $('#ccv').val(nome);
+              }
+                        $(document).ready(function () {
+
+                        $.ajax({
+                            url: "/cat_prodottos.json",
+                            dataType: "json",
+                            timeout: 800000,
+                            cache: true}).done(function (o) {
+                            for (var i = 0; i < o.length; i++)
+                            {
+                                $('#tabprodottibody').append('<tr><td>' + o[i].name + '</td><td>  <button type="button" data-dismiss="modal" class="btn btn-primary" onClick="Dispose1(\''+o[i].id+'\',\''+o[i].name+'\')">Seleziona</button></td></tr> ');
+                            }
+                            $('#tabprodotti').DataTable();
+                        });
+                    });
+                </script>
+              <div class="modal-body">
+                <table id="tabprodotti" class="display" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th></th>
+
+                    </tr>
+                </thead>
+                <tbody id="tabprodottibody">
+
+                </tbody>
+            </table>
+              </div>
+
+            </div>
+          </div>
+        </div>

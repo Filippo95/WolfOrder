@@ -1,15 +1,19 @@
+
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Prodottos</h1>
+<h1>Prodotti</h1>
 
-<table>
+<table id="table">
   <thead>
     <tr>
       <th>Nome</th>
       <th>Descrizione</th>
-      <th>Id cat</th>
+      <th>Categoria</th>
       <th>Prezzo</th>
-      <th colspan="3"></th>
+      <th ></th>    <th ></th>    <th ></th>
     </tr>
   </thead>
 
@@ -18,11 +22,11 @@
       <tr>
         <td><%= prodotto.nome %></td>
         <td><%= prodotto.descrizione %></td>
-        <td><%= prodotto.id_cat %></td>
+        <td id="categoria"><%= prodotto.id_cat %></td>
         <td><%= prodotto.prezzo %></td>
-        <td><%= link_to 'Show', prodotto %></td>
-        <td><%= link_to 'Edit', edit_prodotto_path(prodotto) %></td>
-        <td><%= link_to 'Destroy', prodotto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', prodotto, class: "btn btn-success"  %></td>
+        <td><%= link_to 'Edit', edit_prodotto_path(prodotto) , class: "btn btn-warning" %></td>
+        <td><%= link_to 'Destroy', prodotto, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger"  %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +34,37 @@
 
 <br>
 
-<%= link_to 'New Prodotto', new_prodotto_path %>
+<%= link_to 'Nuovo Prodotto', new_prodotto_path , class: "btn btn-primary" %>
+<script>
+   $(document).ready(function () {
+     
+            var categorie=$.ajax({
+                url:"/cat_prodottos.json" ,
+                async: false,
+                dataType: 'json'
+            }).responseJSON;
+            
+  $("tr").each(function() {
+    console.log("faccio");
+            for (var i = 0; i < categorie.length; i++)
+            {
+                if(categorie[i].id==$(this).find('#categoria').text() )
+                {
+                $(this).find('#categoria').text(' ' + categorie[i].name +'');
+                }
+            }
+            
+
+
+             
+
+
+
+                 
+          });
+
+                        
+                       $('#table').DataTable();
+             
+               });
+</script>

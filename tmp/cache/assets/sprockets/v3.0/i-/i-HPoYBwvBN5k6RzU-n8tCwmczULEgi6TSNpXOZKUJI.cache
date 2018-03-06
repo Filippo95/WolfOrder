@@ -1,0 +1,72 @@
+{:uriI"àfile://app/assets/bower_components/eve-raphael/e.html?type=text/html&id=f0be6bc6669cdb8bca0e17f1af8bebaa873b22d8f91c9a92b2f9b5837cf3ee0c:ET:load_pathI" app/assets/bower_components;T:filenameI"3app/assets/bower_components/eve-raphael/e.html;T:	nameI"eve-raphael/e;T:logical_pathI"eve-raphael/e.html;T:content_typeI"text/html;T:sourceI"ï<!DOCTYPE html>
+<html lang="en">
+    <meta charset="utf-8">
+    <title>Eve Use Case</title>
+    <script src="eve.js"></script>
+    <script>
+        var log = function (text) {
+            log.log = log.log || [];
+            log.log.push(text);
+        };
+        window.onload = function () {
+            document.getElementById("res").innerHTML = log.log.join("<br>");
+        };
+    </script>
+    <script>
+        var f1, f2, f3, f4;
+
+        // setting up listeners
+        eve.on("hit", f1 = function () {
+            log("   I‚Äôm hit!");
+        });
+        eve.on("hit/face", f2 = function () {
+            log("   Oh, my face!");
+        });
+        eve.on("hit/chest", f3 = function () {
+            log("   Oh, my chest!");
+        });
+        eve.on("hit/*/leg", f4 = function () {
+            log("   Ouch!");
+        });
+        eve.once("hit", function () {
+            log("   You scoundrel!");
+        })(-1);
+        
+        // fire events
+        log("In your face!");
+        eve("hit/face");
+        // I‚Äôm hit!
+        // Oh, my face!
+        log("Take that!");
+        // You can use ‚Äú.‚Äù or ‚Äú/‚Äù as delimiter
+        eve("hit.chest.leg");
+        // I‚Äôm hit!
+        // Oh, my chest!
+        // Ouch!
+
+        // Unbinding
+        log("");
+        eve.unbind("hit", f3);
+        log("Take that!");
+        eve("hit.chest.leg");
+        // I‚Äôm hit!
+        // Ouch!
+
+        // Unbinding by wildcard
+        log("");
+        eve.unbind("hit/*");
+        log("In your face!");
+        eve("hit.face");
+        // I‚Äôm hit!
+        log("Take that!");
+        eve("hit.chest.leg");
+        // I‚Äôm hit!
+    </script>
+    <pre id="res"></pre>
+</html>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Afile-digest://app/assets/bower_components/eve-raphael/e.html;TTF:charsetI"
+utf-8;F:digest"%∫.3≠Ù’æè 6â∏˘æúr7Ì#âï?NŸA≤‘Î˚:lengthiï:dependencies_digest"%1ù€”?⁄Èãã€úì´x§*√’Å
+Q›6Ä{TnË:idI"Ef0be6bc6669cdb8bca0e17f1af8bebaa873b22d8f91c9a92b2f9b5837cf3ee0c;F:
+mtimel+ÊùZ

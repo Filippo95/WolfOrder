@@ -1,0 +1,40 @@
+{:uriI"úfile://app/assets/bower_components/bootstrap-timepicker/bower.json?type=application/json&id=77dfc5554a210a783b0538b2c60e3c0fb487725528d21e6e8f12cbd69d62357f:ET:load_pathI" app/assets/bower_components;T:filenameI"@app/assets/bower_components/bootstrap-timepicker/bower.json;T:	nameI"bootstrap-timepicker/bower;T:logical_pathI"$bootstrap-timepicker/bower.json;T:content_typeI"application/json;T:sourceI"A{
+    "name": "bootstrap-timepicker",
+    "description": "A timepicker component for Twitter Bootstrap",
+    "version": "0.5.2",
+    "main": "js/bootstrap-timepicker.js",
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "_layouts",
+        "node_modules",
+        "_config.yml",
+        "assets",
+        "spec",
+        "index.html",
+        "Gruntfile.js",
+        "package.json",
+        "composer.json"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/jdewit/bootstrap-timepicker"
+    },
+    "dependencies": {
+        "bootstrap": "^3.0",
+        "jquery": "^2.0"
+    },
+    "devDependencies": {
+        "autotype": "https://raw.github.com/mmonteleone/jquery.autotype/master/jquery.autotype.js"
+    },
+    "keywords": [
+        "widget",
+        "timepicker",
+        "time"
+    ]
+}
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"@processors:type=application/json&file_type=application/json;TTI"Nfile-digest://app/assets/bower_components/bootstrap-timepicker/bower.json;TTF:charsetI"
+utf-8;F:digest"%êuıàŒ3:Oú¥SóÁ,¸zÒ«≥yçı%ªáÕ^:lengthiA:dependencies_digest"%a–M-ˆgÖπ^˝ZÛ\g^‰æﬁßÀ95†Û:idI"E77dfc5554a210a783b0538b2c60e3c0fb487725528d21e6e8f12cbd69d62357f;F:
+mtimel+ÁùZ

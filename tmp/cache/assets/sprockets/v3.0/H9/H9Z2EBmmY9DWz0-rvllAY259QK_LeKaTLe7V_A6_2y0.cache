@@ -1,0 +1,37 @@
+{:uriI"²file://app/assets/bower_components/bootstrap-datepicker/docs/_screenshots/markup_daterange.html?type=text/html&id=7cd97545616cf8a69e70a5554253f70845bdf97c5c98e9bf4fe2c0df45a37a60:ET:load_pathI" app/assets/bower_components;T:filenameI"]app/assets/bower_components/bootstrap-datepicker/docs/_screenshots/markup_daterange.html;T:	nameI"<bootstrap-datepicker/docs/_screenshots/markup_daterange;T:logical_pathI"Abootstrap-datepicker/docs/_screenshots/markup_daterange.html;T:content_typeI"text/html;T:sourceI"¶<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="script/common.css">
+        <script src="script/common.js"></script>
+        <script>
+            function setup(){
+                $('.input-daterange').datepicker({
+                    format: 'yyyy-mm-dd'
+                });
+            }
+        </script>
+    </head>
+    <body data-capture=".input-daterange, .datepicker" data-show="input:first, input:last">
+        <div class="row">
+            <div class="col-sm-5">
+                <div class="input-group input-daterange">
+                    <input type="text" class="form-control" value="2012-04-05">
+                    <div class="input-group-addon">to</div>
+                    <input type="text" class="form-control" value="2012-04-19">
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <div class="input-group input-daterange">
+                    <input type="text" class="form-control" value="2012-04-05">
+                    <div class="input-group-addon">to</div>
+                    <input type="text" class="form-control" value="2012-04-19">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"kfile-digest://app/assets/bower_components/bootstrap-datepicker/docs/_screenshots/markup_daterange.html;TTF:charsetI"
+utf-8;F:digest"%ß`àEî¼‰^~ÆŞB;ĞCe‚ÈÍ¸•‡}4™:lengthi¶:dependencies_digest"%öß?’lûñğóƒdËºëe«46¬{ä	cj:idI"E7cd97545616cf8a69e70a5554253f70845bdf97c5c98e9bf4fe2c0df45a37a60;F:
+mtimel+şçZ

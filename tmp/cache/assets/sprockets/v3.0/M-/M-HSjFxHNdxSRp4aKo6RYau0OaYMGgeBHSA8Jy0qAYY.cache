@@ -1,0 +1,29 @@
+{:uriI"ïfile://app/assets/bower_components/jquery-knob/package.json?type=application/json&id=d76350add048dfeff0e9bece6b4aff8eaf19dd9c30c047eeef0d333b51772b79:ET:load_pathI" app/assets/bower_components;T:filenameI"9app/assets/bower_components/jquery-knob/package.json;T:	nameI"jquery-knob/package;T:logical_pathI"jquery-knob/package.json;T:content_typeI"application/json;T:sourceI"M{
+  "name": "jquery-knob",
+  "version": "1.2.13",
+  "description": "Nice, downward compatible, touchable, jQuery dial",
+  "main": "dist/jquery.knob.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aterrien/jQuery-Knob.git"
+  },
+  "keywords": [
+    "jquery",
+    "knob",
+    "dial"
+  ],
+  "author": "Anthony Terrien",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aterrien/jQuery-Knob/issues"
+  },
+  "homepage": "https://github.com/aterrien/jQuery-Knob#readme"
+}
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"@processors:type=application/json&file_type=application/json;TTI"Gfile-digest://app/assets/bower_components/jquery-knob/package.json;TTF:charsetI"
+utf-8;F:digest"%@OüèÁÆW°qO∫˘èënım”E9XWÈÒDwﬁ:lengthiM:dependencies_digest"%‚ø_ÿπSÍƒÖêπŸ8_ÚCˇ#iåæ,E$©-t†î:idI"Ed76350add048dfeff0e9bece6b4aff8eaf19dd9c30c047eeef0d333b51772b79;F:
+mtimel+ZÁùZ

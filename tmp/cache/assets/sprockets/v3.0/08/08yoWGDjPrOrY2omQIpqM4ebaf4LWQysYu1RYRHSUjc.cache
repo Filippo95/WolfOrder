@@ -1,0 +1,33 @@
+{:uriI"ùfile://app/assets/bower_components/morris.js/examples/donut-formatter.html?type=text/html&id=726f977fe9b4bcffe8c7d7db2459a7bdea65afc2751ebf91a34a5a4b6fa1bdbe:ET:load_pathI" app/assets/bower_components;T:filenameI"Happ/assets/bower_components/morris.js/examples/donut-formatter.html;T:	nameI"'morris.js/examples/donut-formatter;T:logical_pathI",morris.js/examples/donut-formatter.html;T:content_typeI"text/html;T:sourceI"(<!doctype html>
+<head>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js"></script>
+  <script src="../morris.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.min.js"></script>
+  <script src="lib/example.js"></script>
+  <link rel="stylesheet" href="lib/example.css">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.min.css">
+  <link rel="stylesheet" href="../morris.css">
+</head>
+<body>
+<h1>Donut Chart</h1>
+<div id="graph"></div>
+<pre id="code" class="prettyprint linenums">
+Morris.Donut({
+  element: 'graph',
+  data: [
+    {value: 70, label: 'foo', formatted: 'at least 70%' },
+    {value: 15, label: 'bar', formatted: 'approx. 15%' },
+    {value: 10, label: 'baz', formatted: 'approx. 10%' },
+    {value: 5, label: 'A really really long label', formatted: 'at most 5%' }
+  ],
+  formatter: function (x, data) { return data.formatted; }
+});
+</pre>
+</body>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Vfile-digest://app/assets/bower_components/morris.js/examples/donut-formatter.html;TTF:charsetI"
+utf-8;F:digest"%Í_Å÷„ã9ï%ªwNmﬁ‰7AÙË*aL>≥‘#S:lengthi(:dependencies_digest"%ßŸº¡ 
+I?°q‡'1{nÈ`‹∂€/uµë‘Û7Q˚:idI"E726f977fe9b4bcffe8c7d7db2459a7bdea65afc2751ebf91a34a5a4b6fa1bdbe;F:
+mtimel+¯ÊùZ

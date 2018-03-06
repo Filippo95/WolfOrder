@@ -1,0 +1,43 @@
+{:uriI"™file://app/assets/bower_components/jvectormap/tests/processor/continents_wb.json?type=application/json&id=e14044ebf8107dfdbe2e64b40d2d88bb4ec27d2fe72edcd9e28ecc8799676a87:ET:load_pathI" app/assets/bower_components;T:filenameI"Napp/assets/bower_components/jvectormap/tests/processor/continents_wb.json;T:	nameI"-jvectormap/tests/processor/continents_wb;T:logical_pathI"2jvectormap/tests/processor/continents_wb.json;T:content_typeI"application/json;T:sourceI"€[{
+    "name": "read_data",
+    "file_name": "/Users/kirilllebedev/Maps/ne_110m_admin_0_map_units/ne_110m_admin_0_map_units.shp"
+},{
+    "name": "buffer",
+    "distance": 0.0000001,
+    "resolution": 1
+},{
+    "name": "join_data",
+    "data": [
+        ["Antarctica", "ANT"],
+        ["East Asia & Pacific", "EAP"],
+        ["Europe & Central Asia", "ECA"],
+        ["Latin America & Caribbean", "LAC"],
+        ["Middle East & North Africa", "MENA"],
+        ["North America", "NA"],
+        ["South Asia", "SA"],
+        ["Sub-Saharan Africa", "SSA"]
+    ],
+    "fields": [{
+        "name": "region_wb",
+        "type": 4,
+        "width": 100
+    },{
+        "name": "r_wb_code",
+        "type": 4,
+        "width": 4
+    }],
+    "on": "region_wb"
+},{
+    "name": "union",
+    "by": "r_wb_code"
+},{
+    "name": "remove_other_fields",
+    "fields": ["r_wb_code", "region_wb"]
+},{
+    "name": "write_data",
+    "file_name": "/Users/kirilllebedev/Maps/continents_wb/continents_wb.shp"
+}];T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"@processors:type=application/json&file_type=application/json;TTI"\file-digest://app/assets/bower_components/jvectormap/tests/processor/continents_wb.json;TTF:charsetI"
+utf-8;F:digest"%…›et…œî{ıçê.z¶ª¿ﬂíwúìˆ:ô¨ÜÂ≤Î:lengthi€:dependencies_digest"%º„π7àùô¢9∞6ÜF ïÁÜm	ï/9hwÖüU:idI"Ee14044ebf8107dfdbe2e64b40d2d88bb4ec27d2fe72edcd9e28ecc8799676a87;F:
+mtimel+πËùZ

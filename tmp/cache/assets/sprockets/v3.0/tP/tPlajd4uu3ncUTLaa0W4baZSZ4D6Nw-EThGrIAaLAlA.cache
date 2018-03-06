@@ -1,0 +1,46 @@
+{:uriI"—file://app/assets/bower_components/ion.rangeSlider/bower.json?type=application/json&id=fcf13936b03dd3ee33633d43bd37b0fd8ba17bbce602e08c99053dcb9ac1eb3d:ET:load_pathI" app/assets/bower_components;T:filenameI";app/assets/bower_components/ion.rangeSlider/bower.json;T:	nameI"ion.rangeSlider/bower;T:logical_pathI"ion.rangeSlider/bower.json;T:content_typeI"application/json;T:sourceI"¯{
+    "name": "ion.rangeSlider",
+    "version": "2.2.0",
+    "homepage": "https://github.com/IonDen/ion.rangeSlider",
+    "authors": [
+        {
+            "name": "IonDen",
+            "email": "denis.ineshin@gmail.com",
+            "homepage": "http://ionden.com"
+        }
+    ],
+    "description": "Powerful range slider with skin support",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/IonDen/ion.rangeSlider.git"
+    },
+    "main": [
+        "js/ion.rangeSlider.js",
+        "css/ion.rangeSlider.css",
+        "css/ion.rangeSlider.skinFlat.css",
+        "img/sprite-skin-flat.png"
+    ],
+    "dependencies": {
+        "jquery": ">=1.8"
+    },
+    "moduleType": [
+        "globals"
+    ],
+    "keywords": [
+        "jquery-plugin",
+        "diapason",
+        "ion",
+        "range",
+        "slider"
+    ],
+    "license": "MIT",
+    "ignore": [
+        "PSD",
+        "ion-rangeSlider.jquery.json"
+    ]
+}
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"@processors:type=application/json&file_type=application/json;TTI"Ifile-digest://app/assets/bower_components/ion.rangeSlider/bower.json;TTF:charsetI"
+utf-8;F:digest"%{_ÚŒ© DòÒlExÄŸS	W´shÒÈŽE37F:lengthi¯:dependencies_digest"%Î,Š÷VbF<èÓ§á5Ê¸ÿÕu7PÙ!þ¸’¨qÒQ:idI"Efcf13936b03dd3ee33633d43bd37b0fd8ba17bbce602e08c99053dcb9ac1eb3d;F:
+mtimel+ÉèZ

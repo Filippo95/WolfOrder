@@ -1,0 +1,91 @@
+{:uriI"éfile://app/assets/bower_components/PACE/install.json?type=application/json&id=5d55a439567ebf0d7e0c73f486a03ce0718f6c11fe47c0249b114dd2d3d2fe1c:ET:load_pathI" app/assets/bower_components;T:filenameI"2app/assets/bower_components/PACE/install.json;T:	nameI"PACE/install;T:logical_pathI"PACE/install.json;T:content_typeI"application/json;T:sourceI"„{
+  "resources": {
+    "head": [
+      {
+        "type": "script",
+        "src": "./pace.js",
+        "moduleType": "global",
+        "exports": ["Pace"]
+      },
+      {
+        "type": "style",
+        "src": "./themes/{{ options.color }}/pace-theme-{{ options.theme }}.css"
+      }
+    ]
+  },
+  "options": {
+    "properties": {
+      "color": {
+        "title": "Color",
+        "type": "string",
+        "enum": [
+          "black",
+          "white",
+          "silver",
+          "red",
+          "orange",
+          "yellow",
+          "green",
+          "blue",
+          "pink",
+          "purple"
+        ],
+        "enumNames": {
+          "black": "Black",
+          "white": "White",
+          "silver": "Silver",
+          "red": "Red",
+          "orange": "Orange",
+          "yellow": "Yellow",
+          "green": "Green",
+          "blue": "Blue",
+          "pink": "Pink",
+          "purple": "Purple"
+        },
+        "default": "blue"
+      },
+      "theme": {
+        "title": "Theme",
+        "type": "string",
+        "enum": [
+          "barber-shop",
+          "big-counter",
+          "bounce",
+          "center-atom",
+          "center-circle",
+          "center-radar",
+          "center-simple",
+          "corner-indicator",
+          "fill-left",
+          "flash",
+          "flat-top",
+          "loading-bar",
+          "mac-osx",
+          "minimal"
+        ],
+        "enumNames": {
+          "barber-shop": "Barber Shop",
+          "big-counter": "Big Counter",
+          "bounce": "Bounce",
+          "center-atom": "Center Atom",
+          "center-circle": "Center Circle",
+          "center-radar": "Center Radar",
+          "center-simple": "Center Simple",
+          "corner-indicator": "Corner Indicator",
+          "fill-left": "Fill Left",
+          "flash": "Flash",
+          "flat-top": "Flat Top",
+          "loading-bar": "Loading Bar",
+          "mac-osx": "Mac OS X",
+          "minimal": "Minimal"
+        },
+        "default": "barber-shop"
+      }
+    }
+  }
+}
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"@processors:type=application/json&file_type=application/json;TTI"@file-digest://app/assets/bower_components/PACE/install.json;TTF:charsetI"
+utf-8;F:digest"%\1zÑî±@”ï∑¯∫e≈QSŒh]∫u6Ò¶vÌßã:lengthi„:dependencies_digest"%]mhXAµr1‹Ñ?Ç∑ÄÍ¥mVQ¬'æ^€:idI"E5d55a439567ebf0d7e0c73f486a03ce0718f6c11fe47c0249b114dd2d3d2fe1c;F:
+mtimel+ÑÁùZ

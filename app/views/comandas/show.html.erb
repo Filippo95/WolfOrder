@@ -1,3 +1,7 @@
+<script  type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -5,15 +9,163 @@
   <%= @comanda.data %>
 </p>
 
+  
+
 <p>
   <strong>Tavolo:</strong>
   <%= @comanda.tavolo %>
 </p>
 
-<p>
-  <strong>Id user:</strong>
-  <%= @comanda.id_user %>
-</p>
 
-<%= link_to 'Edit', edit_comanda_path(@comanda) %> |
-<%= link_to 'Back', comandas_path %>
+
+<table class="table" id="table">
+  <th>Prodotto</th>
+   <th>Modifiche</th>
+  <th>Quantità</th>
+  <tbody id="tabbody">
+    
+  </tbody>
+</table>
+ <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalP">
+       Aggiungi riga
+     </button>
+
+
+
+ <div class="modal fade" id="exampleModalP" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+     <div class="modal-dialog" role="document">
+       <div class="modal-content">
+         <div class="modal-header">
+           <h5 class="modal-title" id="exampleModalLabel">Seleziona Prodotto</h5>
+           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+           </button>
+         </div>
+        <div class="modal-body">
+          <form class="new_riga_comanda" id="new_riga_comanda" action="/riga_comandas" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="MjsjR5uXLQ1s+7UKkSf46Rpi8GMPcSY7sc9Wfp/5/xKeLl3qqiu4Lu26737twwmJEpzg7V87s9TBHognDcuonw==">
+            <div class="field">
+              <label for="riga_comanda_id_comanda">Id comanda</label><br>
+              <input type="hidden" name="riga_comanda[id_comanda]" id="riga_comanda_id_comanda" value='<%= @comanda.id %>'>
+            </div>
+            <div class="field">
+              <label for="riga_comanda_id_prodotto"> Prodotto</label><br>            
+            <input type="text" id="prodotto_mane">
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalPr">
+       Aggiungi Prodotto
+     </button>
+
+    
+            </div>
+            <input type="hidden" name="riga_comanda[id_prodotto]" id="riga_comanda_id_prodotto">
+
+            <div class="field">
+              <label for="riga_comanda_quantit">Quantità</label><br>
+              <input type="number" name="riga_comanda[quantit]" id="riga_comanda_quantit">
+            </div>
+            <div class="field">
+              <label for="riga_comanda_modifiche">Modifiche</label><br>
+              <textarea name="riga_comanda[modifiche]" id="riga_comanda_modifiche"></textarea>
+            </div>
+            <div class="field">
+              <label for="riga_comanda_consegnata"></label><br>
+              <input name="riga_comanda[consegnata]" type="hidden" value="0">
+            </div>
+            <div class="actions">
+              <input type="submit" name="commit" value="Create Riga comanda">
+            </div>
+          </form>
+         </div>
+       </div>
+     </div>
+   </div>
+ <div class="modal fade" id="exampleModalPr" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+     <div class="modal-dialog" role="document">
+       <div class="modal-content">
+         <div class="modal-header">
+             
+           <h5 class="modal-title" id="exampleModalLabel">Seleziona Prodotto</h5>
+           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+           </button>
+         </div>
+        
+         <div class="modal-body">
+           <table id="prodotto" class="display" cellspacing="0" width="100%">
+           <thead>
+               <tr>
+                   <th>Nome</th>
+                   <th>prezzo</th>
+                   <th></th>
+
+               </tr>
+           </thead>
+
+           <tbody id="prodottobody">
+
+           </tbody>
+       </table>
+         </div>
+
+       </div>
+     </div>
+   </div>
+    <script>
+         function ProdottosDispose( id, nome){
+             console.log(id);
+             $('#prodotto_mane').val(nome);
+             $('#riga_comanda_id_prodotto').val(id);
+             
+             $('#exampleModalPr').hide();
+             console.log("finito")
+         }
+                   $(document).ready(function () {
+
+                   $.ajax({
+                       url: "/prodottos.json",
+                       dataType: "json",
+                       timeout: 800000,
+                       cache: true}).done(function (o) {
+                       
+                       for (var i = 0; i < o.length; i++)
+                       {
+                          $('#prodottobody').append('<tr><td>' + o[i].nome + '</td><td>' + o[i].prezzo + '</td>><td>  <button type="button"  class="btn btn-primary" onClick="ProdottosDispose(\''+o[i].id+'\',\''+o[i].nome+'\')">Seleziona</button></td></tr> ');
+                        }
+                        
+                       $('#prodotto').DataTable();
+                   });
+               });
+             
+           </script>
+           <script>
+    $(document).ready(function () {
+var prodotti=$.ajax({
+        url:"/prodottos.json" ,
+        async: false,
+        dataType: 'json'
+    }).responseJSON;
+  
+                      $.ajax({
+                          url: "/riga_comandas.json",
+                          dataType: "json",
+                          timeout: 800000,
+                          cache: true}).done(function (o) {
+                          for (var i = 0; i < o.length; i++)
+                          {
+                            if(o[i].id_comanda=="<%= @comanda.id %>")
+                            {
+                                for(var k=0; k<prodotti.length; k++)
+                                {
+                                    if(prodotti[k].id==o[i].id_prodotto)
+                                    {
+                                          $('#tabbody').append('<tr><td>' + prodotti[k].nome + '</td><td>' + o[i].modifiche + '</td><td>' + o[i].quantit + '</td></tr> ');
+                         
+                                    }
+                                }
+                                
+                             }
+                         }
+                          $('#tabprodotti').DataTable();
+                      });
+    });
+    
+</script>

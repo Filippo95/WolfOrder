@@ -2,18 +2,60 @@
 
 <p>
   <strong>Nome:</strong>
-  <%= @cat_prodotto.nome %>
+  <%= @cat_prodotto.name %>
 </p>
 
 <p>
-  <strong>Desciption:</strong>
-  <%= @cat_prodotto.desciption %>
+  <strong>Descrizione: </strong>
+  <%= @cat_prodotto.description %>
 </p>
 
 <p>
-  <strong>Id parent:</strong>
-  <%= @cat_prodotto.id_parent %>
+  <strong>Padre: :</strong>
+  
+  <span id="categoria"> <%= @cat_prodotto.id_parent %></span>
+  
 </p>
 
-<%= link_to 'Edit', edit_cat_prodotto_path(@cat_prodotto) %> |
-<%= link_to 'Back', cat_prodottos_path %>
+<p>
+  <strong>Destinazione:</strong>
+  
+  <span id="destination"> <%= @cat_prodotto.id_destination %></span>
+  
+</p>
+
+<%= link_to 'Modifica', edit_cat_prodotto_path(@cat_prodotto) , class: "btn btn-warning"%> <br>
+<%= link_to 'Indietro', cat_prodottos_path , class: "btn btn-default"%>
+<script>
+   $(document).ready(function () {
+     
+            var categorie=$.ajax({
+                url:"/cat_prodottos.json" ,
+                async: false,
+                dataType: 'json'
+            }).responseJSON;  
+            var destinaziones=$.ajax({
+                url:"/destinaziones.json" ,
+                async: false,
+                dataType: 'json'
+            }).responseJSON;
+            
+
+    console.log("faccio");
+            for (var i = 0; i < categorie.length; i++)
+            {
+                if(categorie[i].id==$(this).find('#categoria').text() )
+                {
+                $(this).find('#categoria').text(' ' + categorie[i].name +'');
+                }
+            }
+             for (var i = 0; i < destinaziones.length; i++)
+            {
+                if(destinaziones[i].id==$(this).find('#destination').text() )
+                {
+                $(this).find('#destination').text(' ' + destinaziones[i].nome +'');
+                }
+            }
+
+     });
+</script>

@@ -1,6 +1,11 @@
+<script  type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+
+
 <h1>Editing Cat Prodotto</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @cat_prodotto %> |
-<%= link_to 'Back', cat_prodottos_path %>
+<%= link_to 'Visualizza', @cat_prodotto, class: "btn btn-success" %> |
+<%= link_to 'Indietro', cat_prodottos_path , class: "btn btn-default"%>

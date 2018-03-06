@@ -1,0 +1,31 @@
+{:uriI"¶file://app/assets/bower_components/bootstrap-datepicker/docs/_screenshots/option_calendarweeks.html?type=text/html&id=a97084d31cbcd544808aa8c49e20d9e359b3869e8550f6c20e496013583028d4:ET:load_pathI" app/assets/bower_components;T:filenameI"aapp/assets/bower_components/bootstrap-datepicker/docs/_screenshots/option_calendarweeks.html;T:	nameI"@bootstrap-datepicker/docs/_screenshots/option_calendarweeks;T:logical_pathI"Ebootstrap-datepicker/docs/_screenshots/option_calendarweeks.html;T:content_typeI"text/html;T:sourceI"ó<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="script/common.css">
+        <script src="script/common.js"></script>
+        <script>
+            function setup(){
+                $('input').datepicker({
+                    format: 'mm-dd-yyyy',
+                    calendarWeeks: true
+                });
+            }
+        </script>
+    </head>
+    <body data-capture="input, .datepicker">
+        <div class="row">
+            <div class="col-sm-3">
+                <input type="text" class="form-control" value="01-16-2012">
+            </div>
+            <div class="col-sm-offset-2 col-sm-3">
+                <input type="text" class="form-control" value="12-16-2012">
+            </div>
+        </div>
+    </body>
+</html>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"ofile-digest://app/assets/bower_components/bootstrap-datepicker/docs/_screenshots/option_calendarweeks.html;TTF:charsetI"
+utf-8;F:digest"%†•{Åum2ê<ÅÏš2CêalÓ&6‚W0ÊñÓÎ¢:lengthió:dependencies_digest"%PÜ/=;¤ŠÀ¬ ÚB
+J%iõœX1s[Rmçn¢%^:idI"Ea97084d31cbcd544808aa8c49e20d9e359b3869e8550f6c20e496013583028d4;F:
+mtimel+þçZ

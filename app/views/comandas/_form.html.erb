@@ -11,15 +11,15 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :data %><br>
-    <%= f.date_select :data %>
+    <%= f.date_select :data ,:html=>{:class => "form-control"}  %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :tavolo %><br>
-    <%= f.number_field :tavolo %>
+    <%= f.number_field :tavolo ,:html=>{:class => "form-control"} %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.hidden_field :id_user , :value =>current_user.id %>
   </div>
   <div class="actions">

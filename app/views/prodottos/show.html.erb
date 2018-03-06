@@ -1,3 +1,5 @@
+
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -11,8 +13,9 @@
 </p>
 
 <p>
-  <strong>Id cat:</strong>
-  <%= @prodotto.id_cat %>
+  <strong>Categoria :</strong>
+  <span id="categoria"> <%= @prodotto.id_cat %></span>
+ 
 </p>
 
 <p>
@@ -22,3 +25,24 @@
 
 <%= link_to 'Edit', edit_prodotto_path(@prodotto) %> |
 <%= link_to 'Back', prodottos_path %>
+<script>
+   $(document).ready(function () {
+     
+            var categorie=$.ajax({
+                url:"/cat_prodottos.json" ,
+                async: false,
+                dataType: 'json'
+            }).responseJSON;
+            
+
+    console.log("faccio");
+            for (var i = 0; i < categorie.length; i++)
+            {
+                if(categorie[i].id==$(this).find('#categoria').text() )
+                {
+                $(this).find('#categoria').text(' ' + categorie[i].name +'');
+                }
+            }
+
+     });
+</script>

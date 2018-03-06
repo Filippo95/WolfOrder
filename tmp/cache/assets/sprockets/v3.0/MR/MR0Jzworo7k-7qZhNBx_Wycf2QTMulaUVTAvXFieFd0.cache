@@ -1,0 +1,40 @@
+{:uriI"åfile://app/assets/bower_components/PACE/bower.json?type=application/json&id=d7c6bdb4df5dce26eceec665427f97bdcb43a814c493795d03b773aa34bf19be:ET:load_pathI" app/assets/bower_components;T:filenameI"0app/assets/bower_components/PACE/bower.json;T:	nameI"PACE/bower;T:logical_pathI"PACE/bower.json;T:content_typeI"application/json;T:sourceI"ç{
+  "name": "PACE",
+  "main": "pace.js",
+  "version": "1.0.2",
+  "homepage": "http://github.hubspot.com/pace/docs/welcome",
+  "authors": [
+    "Zack Bloom <zackbloom@gmail.com>",
+    "Adam Schwartz <adam.flynn.schwartz@gmail.com>"
+  ],
+  "description": "Automatic page load progress bar",
+  "keywords": [
+    "loading",
+    "load",
+    "pageload",
+    "progress",
+    "activity",
+    "ajax",
+    "spinner",
+    "progress",
+    "bar",
+    "automatic",
+    "client-side"
+  ],
+  "license": "MIT",
+  "ignore": [
+    ".*",
+    "Gruntfile.coffee",
+    "bower_components",
+    "docs",
+    "node_modules",
+    "package.json",
+    "templates",
+    "tests"
+  ]
+}
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"@processors:type=application/json&file_type=application/json;TTI">file-digest://app/assets/bower_components/PACE/bower.json;TTF:charsetI"
+utf-8;F:digest"%Ê“≈()K∑XŒ4mEèÏôáÑˇ1·ÆyÎÑJ∞∞Ëî:lengthiç:dependencies_digest"%Öû÷QÃ˜Ñ(Õ¥Òp(‚KB)ÙOÉSM:idI"Ed7c6bdb4df5dce26eceec665427f97bdcb43a814c493795d03b773aa34bf19be;F:
+mtimel+ÉÁùZ

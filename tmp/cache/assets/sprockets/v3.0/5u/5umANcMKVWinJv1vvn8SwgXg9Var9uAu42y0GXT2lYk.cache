@@ -1,0 +1,18 @@
+{:uriI"“file://app/assets/bower_components/jquery-knob/bower.json?type=application/json&id=1114e44164bec117caf0ef5604e38a0a65d45f4246e9fe61234a10a26b2deb1e:ET:load_pathI" app/assets/bower_components;T:filenameI"7app/assets/bower_components/jquery-knob/bower.json;T:	nameI"jquery-knob/bower;T:logical_pathI"jquery-knob/bower.json;T:content_typeI"application/json;T:sourceI"{
+  "name": "jquery-knob",
+  "version": "1.2.13",
+  "main": "js/jquery.knob.js",
+  "description": "Nice, downward compatible, touchable, jQuery dial.",
+  "license": "MIT",
+  "ignore": [],
+  "dependencies": {
+    "jquery": ">=1.7.0"
+  },
+  "devDependencies": {}
+}
+
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"@processors:type=application/json&file_type=application/json;TTI"Efile-digest://app/assets/bower_components/jquery-knob/bower.json;TTF:charsetI"
+utf-8;F:digest"%›*€KÀ¾ÓÖŸí_jy_®ëøfcò?âå¦q:lengthi:dependencies_digest"%WáŠ.œûIc×°·@›GÍÓ<[~D{OqP:idI"E1114e44164bec117caf0ef5604e38a0a65d45f4246e9fe61234a10a26b2deb1e;F:
+mtimel+YçZ

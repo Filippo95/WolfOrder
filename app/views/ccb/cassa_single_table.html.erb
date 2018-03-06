@@ -1,0 +1,112 @@
+<h1>Cassa</h1>
+
+    <!-- Ignite UI Required Combined CSS Files -->
+    <link href="http://cdn-na.infragistics.com/igniteui/2017.2/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
+    <link href="http://cdn-na.infragistics.com/igniteui/2017.2/latest/css/structure/infragistics.css" rel="stylesheet" />
+
+    <script src="http://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.8.3.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+
+    <!-- Ignite UI Required Combined JavaScript Files -->
+    <script src="http://cdn-na.infragistics.com/igniteui/2017.2/latest/js/infragistics.core.js"></script>
+    <script src="http://cdn-na.infragistics.com/igniteui/2017.2/latest/js/infragistics.dv.js"></script>
+
+<script  type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+
+    <style type="text/css">
+         #chart {
+            position: relative;
+            float: left;
+            margin-right: 10px;
+            margin-bottom: 10px;
+    }
+
+    </style>
+
+     <div class="box">
+            <div class="box-header">
+              <h1 class="box-title"> Tavolo: <span id="table"></span></h1>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+<table id="data3" class="table table-bordered table-striped">
+	<thead>
+	    <th>Prodotto</th>
+	    <th>Costo</th>
+	    <th>Quantità</th>
+	    <th>Totale</th>
+	    
+	    <th>Cosegnata</th>
+	</thead>
+	<tbody id="tab3">
+
+	</tbody>
+</table>
+</div>
+</div>
+
+<span><span ><font size="30">Totale: </font> </span><font size="25" id="tot"></font><font size="25" >€</font></span>
+<br><br>
+<a  class="btn btn-danger btn-lg">Segnala come Pagato </a>
+    <script>
+$( document ).ready(function() {
+
+
+                        
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+};
+
+
+var table = getUrlParameter('tavolo');
+var tot=0;
+$.ajax({
+                            url: " cassa_single_table.json",
+                            dataType: "json",
+                            timeout: 800000,
+                            cache: true}).done(function (o) {
+                            	console.log(o)
+                            	var consegnato=""
+                            	for (var i = 0; i < o.length; i++)
+                            {
+                                if(o[i][0]==table)
+                                {
+                                    if(o[i][4]==1)
+                                    {
+                                        consegnato="Consegnato"
+                                    }
+                                    else
+                                    {
+                                        consegnato="Non Consegnato"
+                                    }
+                                    
+                                $('#tab3').append('<tr><td>' +o[i][1]+ '</td><td>' +o[i][2]+ '</td><td>' +o[i][3]+ '</td><td>'+o[i][2]*o[i][3]+'</td><td>' +consegnato+ '</td></tr> ')
+                                tot+=o[i][2]*o[i][3];
+                                }
+                            
+                            }
+                            $('#data3').DataTable();
+                            $("#table").html(table);
+                            
+                            $("#tot").html(tot);
+                        });
+
+
+
+});
+           
+    </script>

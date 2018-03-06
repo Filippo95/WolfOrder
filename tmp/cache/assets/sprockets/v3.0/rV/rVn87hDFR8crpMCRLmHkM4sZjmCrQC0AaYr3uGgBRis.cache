@@ -1,0 +1,22 @@
+{:uriI"˜file://app/assets/bower_components/jquery-sparkline/bower.json?type=application/json&id=4ff124d50d605308b620424470bb79cd088848f589a59bd3c2bef57e330f5ff8:ET:load_pathI" app/assets/bower_components;T:filenameI"<app/assets/bower_components/jquery-sparkline/bower.json;T:	nameI"jquery-sparkline/bower;T:logical_pathI" jquery-sparkline/bower.json;T:content_typeI"application/json;T:sourceI"R{
+  "name": "jquery-sparkline",
+  "version": "2.1.3",
+  "homepage": "https://github.com/rkgrep/jquery.sparkline",
+  "authors": [
+    "Gareth Watts <gareth@omnipotent.net>"
+  ],
+  "main": "dist/jquery.sparkline.js",
+  "license": "BSD 3",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"@processors:type=application/json&file_type=application/json;TTI"Jfile-digest://app/assets/bower_components/jquery-sparkline/bower.json;TTF:charsetI"
+utf-8;F:digest"%‡½ÀX$‡ŸTŞ¢©¨!9ÑãqÈH—Ë·şTVÄğVÏ:lengthiR:dependencies_digest"%ÒÇ­qÄ=ìÈuş™Ü”b&&o³1u[Ä[¶ÇrÉm:idI"E4ff124d50d605308b620424470bb79cd088848f589a59bd3c2bef57e330f5ff8;F:
+mtimel+çZ

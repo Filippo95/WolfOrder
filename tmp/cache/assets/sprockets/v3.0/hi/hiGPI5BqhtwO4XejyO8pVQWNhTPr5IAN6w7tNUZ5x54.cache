@@ -1,0 +1,19 @@
+{:uriI"•file://app/assets/bower_components/jquery-ui/component.json?type=application/json&id=c7f16e4c4b5ec2583d7d05ab230fb30dfbfc5024218b369988d323da1b615922:ET:load_pathI" app/assets/bower_components;T:filenameI"9app/assets/bower_components/jquery-ui/component.json;T:	nameI"jquery-ui/component;T:logical_pathI"jquery-ui/component.json;T:content_typeI"application/json;T:sourceI"İ{
+  "name": "jquery-ui",
+  "repo": "components/jqueryui",
+  "version": "1.11.4",
+  "license": "MIT",
+  "scripts": [
+    "jquery-ui.js"
+  ],
+  "main": "jquery-ui.js",
+  "dependencies": {
+    "components/jquery": "*"
+  }
+}
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"@processors:type=application/json&file_type=application/json;TTI"Gfile-digest://app/assets/bower_components/jquery-ui/component.json;TTF:charsetI"
+utf-8;F:digest"%{9R.(^Vª#z0¹w²lÄß¥âÏ÷~Zp:lengthiİ:dependencies_digest"%ÂsöèÚetÕ NÊ€~òÈËVÃ€­ô
+f‘Q,:idI"Ec7f16e4c4b5ec2583d7d05ab230fb30dfbfc5024218b369988d323da1b615922;F:
+mtimel+-èZ

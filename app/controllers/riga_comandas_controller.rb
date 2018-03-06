@@ -1,6 +1,6 @@
 class RigaComandasController < ApplicationController
   before_action :set_riga_comanda, only: [:show, :edit, :update, :destroy]
-
+skip_before_action :verify_authenticity_token
   # GET /riga_comandas
   # GET /riga_comandas.json
   def index
@@ -69,6 +69,6 @@ class RigaComandasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def riga_comanda_params
-      params.require(:riga_comanda).permit(:id_comanda, :id_prodotto, :quantit, :modifiche)
+      params.require(:riga_comanda).permit(:id_comanda, :id_prodotto, :quantit, :modifiche, :consegnata)
     end
 end

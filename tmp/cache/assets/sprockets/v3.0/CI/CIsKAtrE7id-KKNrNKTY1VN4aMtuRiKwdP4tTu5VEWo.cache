@@ -1,0 +1,27 @@
+{:uriI"˜file://app/assets/bower_components/bootstrap-slider/bower.json?type=application/json&id=0add0b0d05c535a74bdd7decd9c4177b670510138f41958e226abd62f37624ab:ET:load_pathI" app/assets/bower_components;T:filenameI"<app/assets/bower_components/bootstrap-slider/bower.json;T:	nameI"bootstrap-slider/bower;T:logical_pathI" bootstrap-slider/bower.json;T:content_typeI"application/json;T:sourceI"¯{
+  "name": "bootstrap-slider",
+  "main": ["bootstrap-slider.js", "slider.css"],
+  "version": "2.0.0",
+  "homepage": "https://github.com/pammacdotnet/bootstrap-slider",
+  "authors": [
+    "pammacdotnet"
+  ],
+  "description": "Eyecon Slider for Bootstrap",
+  "keywords": [
+    "slider",
+    "bootstrap"
+  ],
+  "license": "Apache",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"@processors:type=application/json&file_type=application/json;TTI"Jfile-digest://app/assets/bower_components/bootstrap-slider/bower.json;TTF:charsetI"
+utf-8;F:digest"%Â!‹ýE§Åý	bc¬Z27Ìú¿J€RÅl•mó(»Û[:lengthi¯:dependencies_digest"%‘‹bëË©‚f°b…Mášî.woMú™o¬öâÛ‡ƒI:idI"E0add0b0d05c535a74bdd7decd9c4177b670510138f41958e226abd62f37624ab;F:
+mtimel+xêZ

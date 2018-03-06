@@ -1,0 +1,21 @@
+<%= form_for(@destinazione) do |f| %>
+  <% if @destinazione.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@destinazione.errors.count, "error") %> prohibited this destinazione from being saved:</h2>
+
+      <ul>
+      <% @destinazione.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %><br>
+    <%= f.text_field :nome %>
+  </div>
+  <div class="actions">
+    <%= f.submit class:'btn btn-primary'%>
+  </div>
+<% end %>

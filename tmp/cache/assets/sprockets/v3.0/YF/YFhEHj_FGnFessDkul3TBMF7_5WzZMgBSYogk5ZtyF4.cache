@@ -1,0 +1,42 @@
+{:uriI"™file://app/assets/bower_components/datatables.net-bs/bower.json?type=application/json&id=974a8f00ffef6d8b70e1b25714145236a3cc80b02befd96d5ab7d6b57aa5a5e6:ET:load_pathI" app/assets/bower_components;T:filenameI"=app/assets/bower_components/datatables.net-bs/bower.json;T:	nameI"datatables.net-bs/bower;T:logical_pathI"!datatables.net-bs/bower.json;T:content_typeI"application/json;T:sourceI"={
+    "name": "datatables.net-bs",
+    "description": "DataTables for jQuery with styling for [Bootstrap](http://getbootstrap.com/)",
+    "main": [
+        "js/dataTables.bootstrap.js",
+        "css/dataTables.bootstrap.css"
+    ],
+    "keywords": [
+        "filter",
+        "sort",
+        "DataTables",
+        "jQuery",
+        "table",
+        "Bootstrap"
+    ],
+    "dependencies": {
+        "jquery": ">=1.7",
+        "datatables.net": ">=1.10.9"
+    },
+    "moduleType": [
+        "globals",
+        "amd",
+        "node"
+    ],
+    "ignore": [
+        "composer.json",
+        "datatables.json",
+        "package.json"
+    ],
+    "authors": [
+        {
+            "name": "SpryMedia Ltd",
+            "homepage": "https://datatables.net"
+        }
+    ],
+    "homepage": "https://datatables.net",
+    "license": "MIT"
+};T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"@processors:type=application/json&file_type=application/json;TTI"Kfile-digest://app/assets/bower_components/datatables.net-bs/bower.json;TTF:charsetI"
+utf-8;F:digest"%¶´ÉvûCøa `ˆÅLû!¸m=ãmã‹Èı^#´iÚ|:lengthi=:dependencies_digest"%–pq†ıŒ]O²"Gczj©Kªò¿ä¤*ô \E:idI"E974a8f00ffef6d8b70e1b25714145236a3cc80b02befd96d5ab7d6b57aa5a5e6;F:
+mtimel+èçZ

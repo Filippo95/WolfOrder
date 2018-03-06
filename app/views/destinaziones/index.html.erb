@@ -1,0 +1,44 @@
+<script  type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+
+<p id="notice"><%= notice %></p>
+
+<h1> Destinazioni</h1>
+
+<table id="table">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th></th><th></th><th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @destinaziones.each do |destinazione| %>
+      <tr>
+        <td><%= destinazione.nome %></td>
+        <td><%= link_to 'Show', destinazione , class: "btn btn-success"%></td>
+        <td><%= link_to 'Modifica', edit_destinazione_path(destinazione), class: "btn btn-warning"  %>
+        
+        </td>
+        <td><%= link_to 'Destroy', destinazione, method: :delete, data: { confirm: 'Are you sure?' }  , class: "btn btn-danger"  %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Destinazione', new_destinazione_path , class: "btn btn-primary"%>
+<script>
+     $(document).ready(function () {
+
+                  
+                       
+                    
+                        
+                       $('#table').DataTable();
+                 
+               });
+</script>

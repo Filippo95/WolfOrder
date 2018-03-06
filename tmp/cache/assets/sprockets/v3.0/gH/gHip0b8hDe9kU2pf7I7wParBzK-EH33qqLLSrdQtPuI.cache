@@ -1,0 +1,66 @@
+{:uriI"™file://app/assets/bower_components/ion.rangeSlider/package.json?type=application/json&id=65a76ce477a8fde300c89009787ea4d4359cc21c703a5cac9f833e43a0ca137d:ET:load_pathI" app/assets/bower_components;T:filenameI"=app/assets/bower_components/ion.rangeSlider/package.json;T:	nameI"ion.rangeSlider/package;T:logical_pathI"!ion.rangeSlider/package.json;T:content_typeI"application/json;T:sourceI"µ{
+    "name": "ion-rangeslider",
+    "version": "2.2.0",
+    "description": "Cool, comfortable and easily customizable range slider with many options and skin support",
+    "homepage": "http://ionden.com/a/plugins/ion.rangeSlider/en.html",
+    "author": {
+        "name": "Denis Ineshin (IonDen)",
+        "email": "ionden.tech@gmail.com",
+        "url": "https://github.com/IonDen"
+    },
+    "keywords": [
+        "jquery-plugin",
+        "ecosystem:jquery",
+        "jquery",
+        "form",
+        "input",
+        "range",
+        "slider",
+        "rangeslider",
+        "interface",
+        "diapason",
+        "ui",
+        "noui",
+        "skins"
+    ],
+    "main": "./js/ion.rangeSlider.js",
+    "directories": {
+        "lib": "js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/IonDen/ion.rangeSlider.git"
+    },
+    "bugs": {
+        "url": "https://github.com/IonDen/ion.rangeSlider/issues"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "jquery": ">=1.8"
+    },
+    "ignore": [
+        ".idea",
+        "PSD",
+        "bower.json",
+        "ion-rangeSlider.jquery.json",
+        "readme.ru.md"
+    ],
+
+    "spm": {
+        "main": "js/ion.rangeSlider.js",
+        "dependencies": {
+            "jquery": "1.11.2"
+        },
+        "ignore": [
+            ".idea",
+            "PSD",
+            "bower.json",
+            "ion-rangeSlider.jquery.json",
+            "readme.ru.md"
+        ]
+    }
+};T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"@processors:type=application/json&file_type=application/json;TTI"Kfile-digest://app/assets/bower_components/ion.rangeSlider/package.json;TTF:charsetI"
+utf-8;F:digest"%Èáe®ãè+xMüŽ]hõ&‡˜–G<÷{…„Ø›Qµ:lengthiµ:dependencies_digest"%E/ÀBâÆ†½f;ÑãAk´ÜÓÖ(±zÉßÌË[s(n:idI"E65a76ce477a8fde300c89009787ea4d4359cc21c703a5cac9f833e43a0ca137d;F:
+mtimel+ÊèZ

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  
   authenticated :user do
     root to: 'prodottos#index', as: :authenticated_root
   end
@@ -14,6 +15,19 @@ Rails.application.routes.draw do
   resources :cat_prodottos
   resources :prodottos
   resources :comandas
+  resources :riga_comandas
+  resources :cat_prodottos
+  resources :destinaziones
+  get 'ccb/cassa'
+
+  get 'ccb/cucina'
+
+  get 'ccb/bar'
+    get 'ccb/cassa_single_table'
+
+    get 'destination/index'
+        get 'ccb/destroy_table'
+  resources :riga_comandas
   resources :riga_comandas
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

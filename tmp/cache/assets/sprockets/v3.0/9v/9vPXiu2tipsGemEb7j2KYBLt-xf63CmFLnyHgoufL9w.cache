@@ -1,0 +1,30 @@
+{:uriI"²file://app/assets/bower_components/bootstrap-datepicker/docs/_screenshots/option_weekstart.html?type=text/html&id=6b8b8c04e9d7775ba7d2682205918353e308a67098ecfbe5f1565c32276092db:ET:load_pathI" app/assets/bower_components;T:filenameI"]app/assets/bower_components/bootstrap-datepicker/docs/_screenshots/option_weekstart.html;T:	nameI"<bootstrap-datepicker/docs/_screenshots/option_weekstart;T:logical_pathI"Abootstrap-datepicker/docs/_screenshots/option_weekstart.html;T:content_typeI"text/html;T:sourceI"k<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="script/common.css">
+        <script src="script/common.js"></script>
+        <script>
+            function setup(){
+                $('input').datepicker();
+            }
+        </script>
+    </head>
+    <body data-capture="input, .datepicker">
+        <div class="row">
+            <div class="col-sm-3">
+                <input type="text" class="form-control" value="03/03/2013" data-date-week-start="2">
+            </div>
+            <div class="col-sm-offset-1 col-sm-3">
+                <input type="text" class="form-control" value="03/03/2013" data-date-week-start="4">
+            </div>
+            <div class="col-sm-offset-1 col-sm-3">
+                <input type="text" class="form-control" value="03/03/2013" data-date-week-start="6">
+            </div>
+        </div>
+    </body>
+</html>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"kfile-digest://app/assets/bower_components/bootstrap-datepicker/docs/_screenshots/option_weekstart.html;TTF:charsetI"
+utf-8;F:digest"%éêØÖîì¦Ë¥İßÔäˆƒú¼ûÿxÏ¸¨Ä>÷3Lv:lengthik:dependencies_digest"%w<Íë\4cËŸ(˜+„ìw|n ->ü<p>¼U¹»H:idI"E6b8b8c04e9d7775ba7d2682205918353e308a67098ecfbe5f1565c32276092db;F:
+mtimel+ıçZ

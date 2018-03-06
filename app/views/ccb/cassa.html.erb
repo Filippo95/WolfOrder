@@ -1,0 +1,67 @@
+<h1>Cassa</h1>
+
+    <!-- Ignite UI Required Combined CSS Files -->
+    <link href="http://cdn-na.infragistics.com/igniteui/2017.2/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
+    <link href="http://cdn-na.infragistics.com/igniteui/2017.2/latest/css/structure/infragistics.css" rel="stylesheet" />
+
+    <script src="http://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.8.3.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+
+    <!-- Ignite UI Required Combined JavaScript Files -->
+    <script src="http://cdn-na.infragistics.com/igniteui/2017.2/latest/js/infragistics.core.js"></script>
+    <script src="http://cdn-na.infragistics.com/igniteui/2017.2/latest/js/infragistics.dv.js"></script>
+
+<script  type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+
+    <style type="text/css">
+         #chart {
+            position: relative;
+            float: left;
+            margin-right: 10px;
+            margin-bottom: 10px;
+    }
+
+    </style>
+
+    <div id="chart"></div>
+    
+<table id="data3">
+	<thead>
+	    <th>Tavolo</th>
+	    <th></th>
+	</thead>
+	<tbody id="tab3">
+
+	</tbody>
+</table>
+
+    <script>
+$( document ).ready(function() {
+
+
+                        $.ajax({
+                            url: " cassa.json",
+                            dataType: "json",
+                            timeout: 800000,
+                            cache: true}).done(function (o) {
+                            	console.log(o)
+                            	for (var i = 0; i < o.length; i++)
+                            {
+                                $('#tab3').append('<tr><td>' +o[i][0]+ '</td><td><a href="cassa_single_table?tavolo='+o[i][0]+'" class="btn btn-primary"> Dettagli</a></td></tr> ')
+                            
+                            }
+                            $('#data3').DataTable();
+                            
+                        });
+                        
+                        setTimeout(function(){
+   window.location.reload(1);
+}, 30000);
+});
+           
+    </script>
+
+

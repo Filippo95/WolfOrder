@@ -1,0 +1,25 @@
+{:uriI"file://app/assets/bower_components/bootstrap-colorpicker/bower.json?type=application/json&id=353894967ae5a1b679341bbb943055f571d8527e1d4bcc5961968f989c4b964b:ET:load_pathI" app/assets/bower_components;T:filenameI"Aapp/assets/bower_components/bootstrap-colorpicker/bower.json;T:	nameI" bootstrap-colorpicker/bower;T:logical_pathI"%bootstrap-colorpicker/bower.json;T:content_typeI"application/json;T:sourceI"a{
+  "name": "bootstrap-colorpicker",
+  "main": [
+    "dist/css/bootstrap-colorpicker.css",
+    "dist/js/bootstrap-colorpicker.js"
+  ],
+  "dependencies": {
+    "jquery": ">=1.10"
+  },
+  "ignore": [
+    "\\.*",
+    "/index.html",
+    "/package.json",
+    "/composer.json",
+    "/Gruntfile.js",
+    "/.travis.yml",
+    "/travis.sh",
+    "/server.js"
+  ]
+}
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"@processors:type=application/json&file_type=application/json;TTI"Ofile-digest://app/assets/bower_components/bootstrap-colorpicker/bower.json;TTF:charsetI"
+utf-8;F:digest"%®ÿv•”Ó¸„WZFtdiš&8tÛ¥[¾/ Lk¬Rb¦ï:lengthia:dependencies_digest"%¡™Ù˜ñ[ qŠàZ8f	ŠqèÖ"?éÑ‹àQìÎ:idI"E353894967ae5a1b679341bbb943055f571d8527e1d4bcc5961968f989c4b964b;F:
+mtimel+KçZ

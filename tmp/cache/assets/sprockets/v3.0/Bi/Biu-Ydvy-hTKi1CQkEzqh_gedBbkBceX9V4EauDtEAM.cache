@@ -1,0 +1,23 @@
+{:uriI"”file://app/assets/bower_components/Ionicons/component.json?type=application/json&id=bcb9e8ffd298458bd672f09a95674225faa4f68e84f7c5146dcbbd1d75898407:ET:load_pathI" app/assets/bower_components;T:filenameI"8app/assets/bower_components/Ionicons/component.json;T:	nameI"Ionicons/component;T:logical_pathI"Ionicons/component.json;T:content_typeI"application/json;T:sourceI"­{
+    "repo": "driftyco/ionicons",
+    "development": {},
+    "version": "2.0.0",
+    "styles": [
+        "css/ionicons.css"
+    ],
+    "name": "Ionicons",
+    "dependencies": {},
+    "keywords": [],
+    "license": "MIT",
+    "fonts": [
+        "fonts/ionicons.eot",
+        "fonts/ionicons.svg",
+        "fonts/ionicons.ttf",
+        "fonts/ionicons.woff"
+    ],
+    "description": "The premium icon font for Ionic Framework."
+};T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"@processors:type=application/json&file_type=application/json;TTI"Ffile-digest://app/assets/bower_components/Ionicons/component.json;TTF:charsetI"
+utf-8;F:digest"%šróÕş	SÕõ7e ëë‰J\ ¦>YaO¢>‡):lengthi­:dependencies_digest"%JÙ² 0÷ÇüEû±…±¤ÿYxÎ{~SÎ+V÷æåÖ:idI"Ebcb9e8ffd298458bd672f09a95674225faa4f68e84f7c5146dcbbd1d75898407;F:
+mtimel+LæZ

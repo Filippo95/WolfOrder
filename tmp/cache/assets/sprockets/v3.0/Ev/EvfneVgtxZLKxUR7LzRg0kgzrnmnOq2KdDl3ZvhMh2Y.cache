@@ -1,0 +1,37 @@
+{:uriI"ïfile://app/assets/bower_components/jvectormap/tests/us.json?type=application/json&id=177ab6294b6ae41b0a74a9aa40c9827af24f72471e065a826e2a06d21d8ab788:ET:load_pathI" app/assets/bower_components;T:filenameI"9app/assets/bower_components/jvectormap/tests/us.json;T:	nameI"jvectormap/tests/us;T:logical_pathI"jvectormap/tests/us.json;T:content_typeI"application/json;T:sourceI"c{
+	"input_file": "/Users/kirilllebedev/Maps/ne_10m_admin_1_states_provinces_lakes/ne_10m_admin_1_states_provinces_lakes.shp",
+	"output_file": "tests/assets/jquery-jvectormap-data-us-lcc-en.js",
+	"name_field": "name",
+	"code_field": "iso_3166_2",
+	"projection": "lcc",
+	"name": "us",
+	"longitude0": -100,
+	"where": "iso_a2 = 'US'",
+	"minimal_area": 4000000,
+	"insets": [{
+		"codes": ["US-AK"],
+		"width": 220,
+		"left": 0,
+		"top": 440
+	},{
+		"codes": ["US-HI"],
+		"width": 80,
+		"left": 245,
+		"top": 460
+	}],
+	"for_each": {
+		"input_file": "/Users/kirilllebedev/Maps/us-counties/countyp010g.shp",
+		"output_file": "tests/assets/us/jquery-jvectormap-data-{{code}}-lcc-en.js",
+		"width": 1000,
+		"name_field": "ADMIN_NAME",
+		"code_field": "ADMIN_FIPS",
+		"where": "STATE = SUBSTR('{{code}}', 4)",
+		"projection": "lcc",
+		"name": "{{code}}",
+		"longitude0": -100
+	}
+};T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"@processors:type=application/json&file_type=application/json;TTI"Gfile-digest://app/assets/bower_components/jvectormap/tests/us.json;TTF:charsetI"
+utf-8;F:digest"%…qs	j_%Dˇ≥L˙y©Â\…ê Óíﬂ¸®$¬•tT:lengthic:dependencies_digest"%¸È3/⁄'æ9ÅµmîL€x≤‰îjrw<n¡Ú:idI"E177ab6294b6ae41b0a74a9aa40c9827af24f72471e065a826e2a06d21d8ab788;F:
+mtimel+∫ËùZ

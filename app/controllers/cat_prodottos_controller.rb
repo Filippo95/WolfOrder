@@ -69,6 +69,6 @@ class CatProdottosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cat_prodotto_params
-      params.require(:cat_prodotto).permit(:nome, :desciption, :id_parent)
+      params.require(:cat_prodotto).permit(:name, :description, :id_parent, :id_destination)
     end
 end

@@ -1,0 +1,24 @@
+{:uriI"•file://app/assets/bower_components/eve-raphael/package.json?type=application/json&id=029824dd32b7ae4aeff7b8f8dcb241baaf382e81705ec78cd4baadef10e6419b:ET:load_pathI" app/assets/bower_components;T:filenameI"9app/assets/bower_components/eve-raphael/package.json;T:	nameI"eve-raphael/package;T:logical_pathI"eve-raphael/package.json;T:content_typeI"application/json;T:sourceI"†{
+    "name"    : "eve",
+
+    "author"  : {
+        "name"  : "Dmitry Baranovskiy",
+        "email" : "dmitry@baranovskiy.com",
+        "url"   : "http://dmitry.baranovskiy.com"
+    },
+	"description" : "Simple custom events",
+    "version" : "0.5.0",
+
+    "main"    : "./eve.js",
+
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:adobe-webplatform/eve.git"
+    }
+}
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"@processors:type=application/json&file_type=application/json;TTI"Gfile-digest://app/assets/bower_components/eve-raphael/package.json;TTF:charsetI"
+utf-8;F:digest"%óJª…ñBÀÉBUí™İé±—áÅ‹fø0÷÷â@¶:lengthi†:dependencies_digest"%	)
+Œ«ÓhØp%záÈF×‰5_0›qQ³1ı=±¿Êi:idI"E029824dd32b7ae4aeff7b8f8dcb241baaf382e81705ec78cd4baadef10e6419b;F:
+mtimel+ğæZ

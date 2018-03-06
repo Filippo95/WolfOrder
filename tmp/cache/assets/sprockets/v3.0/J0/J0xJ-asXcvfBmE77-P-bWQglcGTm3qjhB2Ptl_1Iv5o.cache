@@ -1,0 +1,28 @@
+{:uriI"≤file://app/assets/bower_components/bootstrap-datepicker/docs/_screenshots/option_startdate.html?type=text/html&id=9fb9763c486e2e07b0e30fcb6c59b35abda7b61d8924942b04a861542bce3b71:ET:load_pathI" app/assets/bower_components;T:filenameI"]app/assets/bower_components/bootstrap-datepicker/docs/_screenshots/option_startdate.html;T:	nameI"<bootstrap-datepicker/docs/_screenshots/option_startdate;T:logical_pathI"Abootstrap-datepicker/docs/_screenshots/option_startdate.html;T:content_typeI"text/html;T:sourceI"u<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="script/common.css">
+        <script src="script/common.js"></script>
+        <script>
+            function setup(){
+                $('input').datepicker({
+                    format: 'mm-dd-yyyy',
+                    startDate: '03-14-2013'
+                });
+            }
+        </script>
+    </head>
+    <body data-capture="input, .datepicker">
+        <div class="row">
+            <div class="col-sm-offset-4 col-sm-3">
+                <input type="text" class="form-control" value="03-18-2013">
+            </div>
+        </div>
+    </body>
+</html>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"kfile-digest://app/assets/bower_components/bootstrap-datepicker/docs/_screenshots/option_startdate.html;TTF:charsetI"
+utf-8;F:digest"%"A[öà+Å ŸúPÊÖ¡-∂—èDÏh<π“tèp“Z6	ñ:lengthiu:dependencies_digest"%<zá±¢[j≤öMÔ¿æW
+÷Á……« ≤5økül#¢KÆ:idI"E9fb9763c486e2e07b0e30fcb6c59b35abda7b61d8924942b04a861542bce3b71;F:
+mtimel+˛ÁùZ

@@ -1,0 +1,53 @@
+{:uriI"∑file://app/assets/bower_components/bootstrap-datepicker/docs/_screenshots/option_todayhighlight.html?type=text/html&id=3938a56f8dc5e0599158deccf461893635bd2dbe750f748271c74b0d2cd00831:ET:load_pathI" app/assets/bower_components;T:filenameI"bapp/assets/bower_components/bootstrap-datepicker/docs/_screenshots/option_todayhighlight.html;T:	nameI"Abootstrap-datepicker/docs/_screenshots/option_todayhighlight;T:logical_pathI"Fbootstrap-datepicker/docs/_screenshots/option_todayhighlight.html;T:content_typeI"text/html;T:sourceI"I<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="script/common.css">
+        <script src="script/common.js"></script>
+        <script>
+            function patch_date(f){
+                var NativeDate = window.Date;
+                var date = function date(y,m,d,h,i,s,j){
+                    switch(arguments.length){
+                        case 0: return date.now ? new NativeDate(date.now) : new NativeDate();
+                        case 1: return new NativeDate(y);
+                        case 2: return new NativeDate(y,m);
+                        case 3: return new NativeDate(y,m,d);
+                        case 4: return new NativeDate(y,m,d,h);
+                        case 5: return new NativeDate(y,m,d,h,i);
+                        case 6: return new NativeDate(y,m,d,h,i,s);
+                        case 7: return new NativeDate(y,y,m,d,h,i,s,j);
+                    }
+                };
+                date.UTC = NativeDate.UTC;
+                return function(){
+                    Array.prototype.push.call(arguments, date);
+                    window.Date = date;
+                    f.apply(this, arguments);
+                    window.Date = NativeDate;
+                };
+            }
+            var setup = patch_date(function(Date){
+                Date.now = new Date(2013, 2, 18);
+                $('input').datepicker({
+                    todayHighlight: true
+                });
+            });
+        </script>
+    </head>
+    <body data-capture="input, .datepicker">
+        <div class="row">
+            <div class="col-sm-3">
+                <input type="text" class="form-control" value="03/03/2013">
+            </div>
+            <div class="col-sm-offset-2 col-sm-3">
+                <input type="text" class="form-control" value="03/18/2013">
+            </div>
+        </div>
+    </body>
+</html>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"pfile-digest://app/assets/bower_components/bootstrap-datepicker/docs/_screenshots/option_todayhighlight.html;TTF:charsetI"
+utf-8;F:digest"%ÇΩ3öÉ∂Q^qé√≈^O∂Ä5q‡m˙˝N©¸câƒ:lengthiI:dependencies_digest"%|UÚlX¨#úT8ŸAË≈ç÷8√w»Ï°@ü[”
+:idI"E3938a56f8dc5e0599158deccf461893635bd2dbe750f748271c74b0d2cd00831;F:
+mtimel+˛ÁùZ

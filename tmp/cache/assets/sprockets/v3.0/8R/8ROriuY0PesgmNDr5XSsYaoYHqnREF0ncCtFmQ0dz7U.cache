@@ -1,0 +1,52 @@
+{:uriI"ôfile://app/assets/bower_components/jquery-slimscroll/bower.json?type=application/json&id=c0ad7848cfe398cc41a0eede96b362d85ea399c6741f0354e675abde3803d7e8:ET:load_pathI" app/assets/bower_components;T:filenameI"=app/assets/bower_components/jquery-slimscroll/bower.json;T:	nameI"jquery-slimscroll/bower;T:logical_pathI"!jquery-slimscroll/bower.json;T:content_typeI"application/json;T:sourceI"={
+  "name": "jquery-slimscroll",
+  "version": "1.3.8",
+  "description": "slimScroll is a small jQuery plugin that transforms any div into a scrollable area. slimScroll doesn't occupy any visual space as it only appears on a user initiated mouse-over.",
+  "keywords": [
+    "scrollbar",
+    "scroll",
+    "slimscroll",
+    "scrollable",
+    "scrolling",
+    "scroller",
+    "ui",
+    "jquery-plugin",
+    "ecosystem:jquery"
+  ],
+  "homepage": "http://rocha.la/jQuery-slimScroll/",
+  "authors": [
+    { "name": "Piotr Rochala", "homepage": "http://rocha.la/" }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rochal/jQuery-slimScroll.git"
+  },
+  "main": [
+    "jquery.slimscroll.js",
+    "jquery.slimscroll.min.js"
+  ],
+  "licenses" : [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
+    },
+    {
+      "type": "GPL",
+      "url": "http://www.opensource.org/licenses/gpl-license.php"
+    }
+  ],
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"@processors:type=application/json&file_type=application/json;TTI"Kfile-digest://app/assets/bower_components/jquery-slimscroll/bower.json;TTF:charsetI"
+utf-8;F:digest"%HxÂ\FÂZåÓyRx›,®?iGÊÛÂÄø¢Êt’:lengthi=:dependencies_digest"%bıãÆw‡ß…
+D4ßêâîπË-∏ı}˝$~Ö˜≈ﬂ∆m†:idI"Ec0ad7848cfe398cc41a0eede96b362d85ea399c6741f0354e675abde3803d7e8;F:
+mtimel+[ÁùZ

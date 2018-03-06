@@ -1,0 +1,40 @@
+{:uriI"ífile://app/assets/bower_components/morris.js/examples/area.html?type=text/html&id=5d29a7976b9cb44157eaac48f128f88f5d4bf604edef5876fe3e35f6e2b989cf:ET:load_pathI" app/assets/bower_components;T:filenameI"=app/assets/bower_components/morris.js/examples/area.html;T:	nameI"morris.js/examples/area;T:logical_pathI"!morris.js/examples/area.html;T:content_typeI"text/html;T:sourceI"J<!doctype html>
+<head>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js"></script>
+  <script src="../morris.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.min.js"></script>
+  <script src="lib/example.js"></script>
+  <link rel="stylesheet" href="lib/example.css">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.min.css">
+  <link rel="stylesheet" href="../morris.css">
+</head>
+<body>
+<h1>Area charts</h1>
+<div id="graph"></div>
+<pre id="code" class="prettyprint linenums">
+// Use Morris.Area instead of Morris.Line
+Morris.Area({
+  element: 'graph',
+  data: [
+    {x: '2010 Q4', y: 3, z: 7},
+    {x: '2011 Q1', y: 3, z: 4},
+    {x: '2011 Q2', y: null, z: 1},
+    {x: '2011 Q3', y: 2, z: 5},
+    {x: '2011 Q4', y: 8, z: 2},
+    {x: '2012 Q1', y: 4, z: 4}
+  ],
+  xkey: 'x',
+  ykeys: ['y', 'z'],
+  labels: ['Y', 'Z']
+}).on('click', function(i, row){
+  console.log(i, row);
+});
+</pre>
+</body>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Kfile-digest://app/assets/bower_components/morris.js/examples/area.html;TTF:charsetI"
+utf-8;F:digest"%Ëiu7b¨>+q≈B—~îQçY"™bÎÆï0®n	≈1:lengthiJ:dependencies_digest"%gó“h<Ü 
+2õüîv#∞,√›Ø”‰u‹õΩ:idI"E5d29a7976b9cb44157eaac48f128f88f5d4bf604edef5876fe3e35f6e2b989cf;F:
+mtimel+˜ÊùZ

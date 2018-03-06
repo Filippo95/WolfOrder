@@ -18,9 +18,9 @@
         <td><%= comanda.data %></td>
         <td><%= comanda.tavolo %></td>
         <td><%= comanda.id_user %></td>
-        <td><%= link_to 'Show', comanda %></td>
-        <td><%= link_to 'Edit', edit_comanda_path(comanda) %></td>
-        <td><%= link_to 'Destroy', comanda, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', comanda , class: "btn btn-success" %></td>
+        <td><%= link_to 'Edit', edit_comanda_path(comanda), class: "btn btn-warning"  %></td>
+        <td><%= link_to 'Destroy', comanda, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger"  %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Comanda', new_comanda_path %>
+<%= link_to 'New Comanda', new_comanda_path, class: "btn btn-primary" %>

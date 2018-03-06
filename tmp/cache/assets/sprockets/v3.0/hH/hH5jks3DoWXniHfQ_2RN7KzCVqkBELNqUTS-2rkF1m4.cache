@@ -1,0 +1,36 @@
+{:uriI"èfile://app/assets/bower_components/raphael/bower.json?type=application/json&id=7a8803e53a51b290cc0acfa3f62c5e8394ef9ad7fe0b69215a874aa5de9bdeb1:ET:load_pathI" app/assets/bower_components;T:filenameI"3app/assets/bower_components/raphael/bower.json;T:	nameI"raphael/bower;T:logical_pathI"raphael/bower.json;T:content_typeI"application/json;T:sourceI"{
+  "name": "raphael",
+  "main": "raphael.min.js",
+  "description": "JavaScript Vector Library",
+  "dependencies": {
+    "eve-raphael": "0.5.0"
+  },
+  "devDependencies": {
+    "requirejs": "2.3.2"
+  },
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": ["svg", "vml", "javascript"],
+  "authors": [
+    "Dmitry Baranovskiy"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "*.html",
+    "*.json",
+    "*.markdown",
+    "*.md",
+    "copy.js",
+    "Gruntfile.js",
+    "reference.js"
+  ]
+}
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"@processors:type=application/json&file_type=application/json;TTI"Afile-digest://app/assets/bower_components/raphael/bower.json;TTF:charsetI"
+utf-8;F:digest"%É˜wâzaR_”åGˆ'©ıÍ˝S,+„ $hC‚Ú5:lengthi:dependencies_digest"%∑·éó±ßﬁú‡œﬂ‹Hû¸•5¯Gî¨÷3Êä)ÿ:idI"E7a8803e53a51b290cc0acfa3f62c5e8394ef9ad7fe0b69215a874aa5de9bdeb1;F:
+mtimel+¿ËùZ

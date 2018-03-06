@@ -1,0 +1,32 @@
+{:uriI"²file://app/assets/bower_components/bootstrap-datepicker/docs/_screenshots/option_multidate.html?type=text/html&id=c889b3fd578b56a10eff5aac2fc4e6430c5a4365d444f24aa1d5a61fe3678c24:ET:load_pathI" app/assets/bower_components;T:filenameI"]app/assets/bower_components/bootstrap-datepicker/docs/_screenshots/option_multidate.html;T:	nameI"<bootstrap-datepicker/docs/_screenshots/option_multidate;T:logical_pathI"Abootstrap-datepicker/docs/_screenshots/option_multidate.html;T:content_typeI"text/html;T:sourceI"Š<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="script/common.css">
+        <script src="script/common.js"></script>
+        <script>
+            function setup(){
+                $('input').datepicker({
+                    multidate: true
+                });
+            }
+        </script>
+    </head>
+    <body data-capture="input, .datepicker">
+        <div class="row">
+            <div class="col-sm-4">
+                <input type="text" class="form-control" value="03/03/2013,03/16/2013">
+            </div>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" value="03/03/2013,06/16/2013" data-date-start-view="1">
+            </div>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" value="03/03/2013,03/16/2014" data-date-start-view="2">
+            </div>
+        </div>
+    </body>
+</html>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"kfile-digest://app/assets/bower_components/bootstrap-datepicker/docs/_screenshots/option_multidate.html;TTF:charsetI"
+utf-8;F:digest"%˜¨r›®reõ@$»…Âˆ_2¯£°àÄr:;Z¼E·:lengthiŠ:dependencies_digest"%opP °aş8òÍ£	tWnW–ÄÏVşsÒ^–e“6‡:idI"Ec889b3fd578b56a10eff5aac2fc4e6430c5a4365d444f24aa1d5a61fe3678c24;F:
+mtimel+şçZ

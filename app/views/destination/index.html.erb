@@ -1,0 +1,103 @@
+
+      <div class="col-2">
+          
+<progress value="0" max="30" id="progressBar"></progress>
+
+          
+     </div>
+  <div class="col-8" >
+      <h1 id="title"></h1>
+      <div class="row" id="destination_menu">
+ 
+  
+      </div>
+      
+  </div>
+  <div class="list-group"  id="prodotti">
+       
+    
+        
+</div>
+<br><br><br>
+
+<script> 
+
+$(document).ready(function () {
+     
+
+               
+                   
+                   
+                   
+ var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+};
+
+
+var id_destinazione = getUrlParameter('id');
+ $.ajax({
+                       url: "/destinaziones.json",
+                       dataType: "json",
+                       timeout: 800000,
+                       cache: true}).done(function (o) {
+                       
+                       for (var i = 0; i < o.length; i++)
+                       {
+                                                     $("#destination_menu").append(' <a href="/destination/index?id='+o[i]['id']+'" ><div class="col-md-3 col-sm-6 col-xs-12">          <div class="info-box">            <span class="info-box-icon bg-red"><i class="fa fa-star-o"></i></span>            <div class="info-box-content">              <span class="info-box-text">'+o[i]['nome']+'</span>            </div>          </div>        </div></a>')
+                            if(o[i]['id']==id_destinazione)
+                            {
+                                $("#title").append(o[i]['nome']);
+                            }
+                         
+                       }
+                       console.log(o);
+                        
+                   });
+
+    $.ajax({
+                       url: "index.json",
+                       dataType: "json",
+                       timeout: 800000,
+                       cache: true}).done(function (o) {
+                       
+                       for (var i = 0; i < o.length; i++)
+                       {
+                         
+                         if(o[i][5]==id_destinazione)
+                         {
+                             $("#prodotti").append('     <div class="col-md-3">          <div class="box box-success">            <div class="box-header with-border">              <h3 class="box-title">'+o[i][1]+'</h3>              </div>            <div class="box-body">    modifiche: '+o[i][2]+'    <br>    Qtà: '+o[i][6]+'     <br>        Tavolo: '+o[i][3]+'              <form class="edit_riga_comanda" id="edit_riga_comanda_6" action="/riga_comandas/'+o[i][7]+'" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="patch"><input type="hidden" name="authenticity_token" value="BUhLIeAgmdxXVEM298xswXCqrDMk0jTDNP2I26zJZFGpXTWM0ZwM/9YVGUKLKJ2heFS8vXSYoSxELFaCPvsz3A=="><input name="riga_comanda[consegnata]" type="hidden" value="1"> <input type="submit" name="commit" value="Consegnata"></form>            </div>          </div>        </div>    ');
+                         }
+                         
+                         
+                       }
+                        
+                   });
+                  
+                   setTimeout(function(){
+   window.location.reload(1);
+}, 30000);
+                   
+                   var timeleft = 30;
+var downloadTimer = setInterval(function(){
+  document.getElementById("progressBar").value = 30 - --timeleft;
+  if(timeleft <= 0)
+    clearInterval(downloadTimer);
+},1000);
+                   
+});
+
+</script>
+ 
+
+

@@ -18,7 +18,7 @@ class RigaComandasControllerTest < ActionController::TestCase
 
   test "should create riga_comanda" do
     assert_difference('RigaComanda.count') do
-      post :create, riga_comanda: { id_comanda: @riga_comanda.id_comanda, id_prodotto: @riga_comanda.id_prodotto, modifiche: @riga_comanda.modifiche, quantit: @riga_comanda.quantit }
+      post :create, riga_comanda: { consegnata: @riga_comanda.consegnata, id_comanda: @riga_comanda.id_comanda, id_prodotto: @riga_comanda.id_prodotto, modifiche: @riga_comanda.modifiche, quantit: @riga_comanda.quantit }
     end
 
     assert_redirected_to riga_comanda_path(assigns(:riga_comanda))
@@ -35,7 +35,7 @@ class RigaComandasControllerTest < ActionController::TestCase
   end
 
   test "should update riga_comanda" do
-    patch :update, id: @riga_comanda, riga_comanda: { id_comanda: @riga_comanda.id_comanda, id_prodotto: @riga_comanda.id_prodotto, modifiche: @riga_comanda.modifiche, quantit: @riga_comanda.quantit }
+    patch :update, id: @riga_comanda, riga_comanda: { consegnata: @riga_comanda.consegnata, id_comanda: @riga_comanda.id_comanda, id_prodotto: @riga_comanda.id_prodotto, modifiche: @riga_comanda.modifiche, quantit: @riga_comanda.quantit }
     assert_redirected_to riga_comanda_path(assigns(:riga_comanda))
   end
 

@@ -1,26 +1,32 @@
+<script  type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Cat Prodottos</h1>
+<h1>Categorie Prodotto</h1>
 
-<table>
+<table id="table">
   <thead>
     <tr>
-      <th>Nome</th>
-      <th>Desciption</th>
-      <th>Id parent</th>
-      <th colspan="3"></th>
+      <th>Name</th>
+      <th>Descrizione</th>
+      <th>Padre</th>
+      <th>Destinazione</th>
+      <th></th><th></th><th></th>
     </tr>
   </thead>
 
   <tbody>
     <% @cat_prodottos.each do |cat_prodotto| %>
       <tr>
-        <td><%= cat_prodotto.nome %></td>
-        <td><%= cat_prodotto.desciption %></td>
-        <td><%= cat_prodotto.id_parent %></td>
-        <td><%= link_to 'Show', cat_prodotto %></td>
-        <td><%= link_to 'Edit', edit_cat_prodotto_path(cat_prodotto) %></td>
-        <td><%= link_to 'Destroy', cat_prodotto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= cat_prodotto.name %></td>
+        <td><%= cat_prodotto.description %></td>
+        <td id="parent"><%= cat_prodotto.id_parent %></td>
+        <td id="destination"><%= cat_prodotto.id_destination %></td>
+        <td><%= link_to 'Show', cat_prodotto , class: "btn btn-success"%></td>
+        <td><%= link_to 'Edit', edit_cat_prodotto_path(cat_prodotto) , class: "btn btn-warning"%></td>
+        <td><%= link_to 'Destroy', cat_prodotto, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-danger"%></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +34,42 @@
 
 <br>
 
-<%= link_to 'New Cat prodotto', new_cat_prodotto_path %>
+<%= link_to 'Nuova Categoria prodotto', new_cat_prodotto_path , class: "btn btn-success"%>
+<script>
+   $(document).ready(function () {
+     
+            var categorie=$.ajax({
+                url:"/cat_prodottos.json" ,
+                async: false,
+                dataType: 'json'
+            }).responseJSON;
+            
+            var destinations=$.ajax({
+                url:"/destinaziones.json" ,
+                async: false,
+                dataType: 'json'
+            }).responseJSON;
+            
+  $("tr").each(function() {
+    console.log("faccio");
+            for (var i = 0; i < categorie.length; i++)
+            {
+                if(categorie[i].id==$(this).find('#parent').text() )
+                {
+                $(this).find('#parent').text(' ' + categorie[i].name +'');
+                }
+            }
+            for (var i = 0; i < destinations.length; i++)
+            {
+                if(destinations[i].id==$(this).find('#destination').text() )
+                {
+                $(this).find('#destination').text(' ' + destinations[i].nome +'');
+                }
+            }
+          });
+
+                        
+                       $('#table').DataTable();
+             
+               });
+</script>

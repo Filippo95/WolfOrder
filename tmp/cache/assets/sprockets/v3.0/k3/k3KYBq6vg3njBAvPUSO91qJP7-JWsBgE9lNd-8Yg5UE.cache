@@ -1,0 +1,62 @@
+{:uriI"ßfile://app/assets/bower_components/jvectormap/tests/processor/continents.json?type=application/json&id=718f9adf5dbcdee01ee84c8ed5a0e987a73bbd6bfa0466af3244bbff98e70340:ET:load_pathI" app/assets/bower_components;T:filenameI"Kapp/assets/bower_components/jvectormap/tests/processor/continents.json;T:	nameI"*jvectormap/tests/processor/continents;T:logical_pathI"/jvectormap/tests/processor/continents.json;T:content_typeI"application/json;T:sourceI"T[{
+    "name": "read_data",
+    "file_name": "/Users/kirilllebedev/Maps/ne_110m_admin_0_map_units/ne_110m_admin_0_map_units.shp"
+},{
+    "name": "join_data",
+    "data": {
+
+    },
+    "fields": [{
+        "name": "region_wb",
+        "type": 4,
+        "width": 100
+    },{
+        "name": "r_wb_code",
+        "type": 4,
+        "width": 4
+    }],
+    "on": "region_wb"
+},{
+    "name": "merge",
+    "fields": [{
+        "name": "code",
+        "type": 4,
+        "width": 2
+    },{
+        "name": "name",
+        "type": 4,
+        "width": 100
+    }],
+    "rules": [{
+        "fields": {
+            "name": "Americas",
+            "code": "AM"
+        },
+        "where": "region_wb in {'Latin America & Caribbean', 'North America'}"
+    },{
+        "fields": {
+            "name": "Europe",
+            "code": "EU"
+        },
+        "where": "region_wb == 'Europe & Central Asia'"
+    },{
+        "fields": {
+            "name": "Asia Pacific and MEIA",
+            "code": "AP"
+        },
+        "where": "region_wb == 'East Asia & Pacific'"
+    },{
+        "fields": {
+            "name": "India and Africa",
+            "code": "IA"
+        },
+        "where": "region_wb in {'Middle East & North Africa', 'South Asia', 'Sub-Saharan Africa'}"
+    }]
+},{
+    "name": "write_data",
+    "file_name": "/Users/kirilllebedev/Maps/continents/continents.shp"
+}];T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"@processors:type=application/json&file_type=application/json;TTI"Yfile-digest://app/assets/bower_components/jvectormap/tests/processor/continents.json;TTF:charsetI"
+utf-8;F:digest"%P˚RGæ∂ùdã∏wŸr’)ﬁJ§û?L|zB|ÓÌx[∂:lengthiT:dependencies_digest"%l‰4nhtë"Äw∞(¬º˚«›ë„€Bî´ÀUœÑ∏¶wg:idI"E718f9adf5dbcdee01ee84c8ed5a0e987a73bbd6bfa0466af3244bbff98e70340;F:
+mtimel+πËùZ

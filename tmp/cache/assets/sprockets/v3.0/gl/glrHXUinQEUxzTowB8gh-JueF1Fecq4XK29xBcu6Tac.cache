@@ -1,0 +1,20 @@
+{:uriI"¯file://app/assets/bower_components/bootstrap-datepicker/docs/_screenshots/markup_inline.html?type=text/html&id=db5e8fd7988bbd19e61e008984b33dc70011d64c0b00955f7a2dc043016eec28:ET:load_pathI" app/assets/bower_components;T:filenameI"Zapp/assets/bower_components/bootstrap-datepicker/docs/_screenshots/markup_inline.html;T:	nameI"9bootstrap-datepicker/docs/_screenshots/markup_inline;T:logical_pathI">bootstrap-datepicker/docs/_screenshots/markup_inline.html;T:content_typeI"text/html;T:sourceI"s<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="script/common.css">
+        <script src="script/common.js"></script>
+        <script>
+            function setup(){
+                $('div').datepicker();
+            }
+        </script>
+    </head>
+    <body data-capture=".datepicker">
+        <div data-date="12/03/2012"></div>
+    </body>
+</html>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"hfile-digest://app/assets/bower_components/bootstrap-datepicker/docs/_screenshots/markup_inline.html;TTF:charsetI"
+utf-8;F:digest"%d­Ü…-ô®vç»(àv‘ô«‡1’è$òÎ¨·U:lengthis:dependencies_digest"%Ğ:@”ı¹d¢ƒ‰–?÷Fl”“AÙ¶¸9™´±6Ç:idI"Edb5e8fd7988bbd19e61e008984b33dc70011d64c0b00955f7a2dc043016eec28;F:
+mtimel+şçZ

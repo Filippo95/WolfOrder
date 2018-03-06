@@ -1,0 +1,17 @@
+{:uriI"‘file://app/assets/bower_components/jquery-ui/bower.json?type=application/json&id=7b5998a59027bb7b99c6e0c5e1e52a10cb4b1d26a9307782968aa1d263c873ca:ET:load_pathI" app/assets/bower_components;T:filenameI"5app/assets/bower_components/jquery-ui/bower.json;T:	nameI"jquery-ui/bower;T:logical_pathI"jquery-ui/bower.json;T:content_typeI"application/json;T:sourceI"—{
+  "name": "jquery-ui",
+  "version": "1.11.4",
+  "main": [
+    "jquery-ui.js"
+  ],
+  "ignore": [
+  ],
+  "dependencies": {
+    "jquery": ">=1.6"
+  }
+}
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"@processors:type=application/json&file_type=application/json;TTI"Cfile-digest://app/assets/bower_components/jquery-ui/bower.json;TTF:charsetI"
+utf-8;F:digest"%Xœ‘K±([ÓOLFA]pÜ©†Mùoª¦Ş•É”J…:lengthi—:dependencies_digest"%;v—V˜,hçâY€jC€|íÔ¿l“ï€ ²¤¶`‡zQ:idI"E7b5998a59027bb7b99c6e0c5e1e52a10cb4b1d26a9307782968aa1d263c873ca;F:
+mtimel+èZ

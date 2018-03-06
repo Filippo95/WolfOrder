@@ -1,0 +1,13 @@
+{:uriI"›file://app/assets/bower_components/jquery-slimscroll/examples/index.html?type=text/html&id=6338750d70cd6550430454d58ab93d9ec36c07db57cadce43c616c266e409afc:ET:load_pathI" app/assets/bower_components;T:filenameI"Fapp/assets/bower_components/jquery-slimscroll/examples/index.html;T:	nameI"%jquery-slimscroll/examples/index;T:logical_pathI"*jquery-slimscroll/examples/index.html;T:content_typeI"text/html;T:sourceI"m<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html>
+    <head>
+    </head>
+    <frameset framespacing="0" cols="250,*" frameborder="0" noresize>
+        <frame name="nav" src="navigation.html" target="top">
+        <frame name="main" src="height-width.html" target="main">
+    </frameset>
+</html>;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Tfile-digest://app/assets/bower_components/jquery-slimscroll/examples/index.html;TTF:charsetI"
+utf-8;F:digest"%¡„èØÌpvñšy [1~êXo÷½HÚRpe4Zc:lengthim:dependencies_digest"%‚ú[±8Â$ZÃãİ”¥RÔ(Å¨K`Ñâ ;5°É'Õ:idI"E6338750d70cd6550430454d58ab93d9ec36c07db57cadce43c616c266e409afc;F:
+mtimel+]çZ

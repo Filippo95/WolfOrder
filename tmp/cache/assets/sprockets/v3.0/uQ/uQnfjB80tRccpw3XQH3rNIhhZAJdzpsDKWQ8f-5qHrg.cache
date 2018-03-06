@@ -1,0 +1,19 @@
+{:uriI"Žfile://app/assets/bower_components/jquery/bower.json?type=application/json&id=2e0707565bbd25f56bf7788f045896106e7421727d8cdf53e41887d8fd88511e:ET:load_pathI" app/assets/bower_components;T:filenameI"2app/assets/bower_components/jquery/bower.json;T:	nameI"jquery/bower;T:logical_pathI"jquery/bower.json;T:content_typeI"application/json;T:sourceI"¾{
+  "name": "jquery",
+  "main": "dist/jquery.js",
+  "license": "MIT",
+  "ignore": [
+    "package.json"
+  ],
+  "keywords": [
+    "jquery",
+    "javascript",
+    "browser",
+    "library"
+  ]
+};T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"@processors:type=application/json&file_type=application/json;TTI"@file-digest://app/assets/bower_components/jquery/bower.json;TTF:charsetI"
+utf-8;F:digest"%€ã‰Žé34{Ÿš„ÃÙ]7{?<ÆD#ù¥M÷ÓÆÔZj­Z:lengthi¾:dependencies_digest"% "rq‚­y#Ÿ+±5T)Uü/
+c#M.˜YÂ¤í¢°«:idI"E2e0707565bbd25f56bf7788f045896106e7421727d8cdf53e41887d8fd88511e;F:
+mtimel+dçZ

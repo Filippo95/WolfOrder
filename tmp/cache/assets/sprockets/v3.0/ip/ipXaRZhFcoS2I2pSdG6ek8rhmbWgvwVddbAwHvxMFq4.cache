@@ -1,0 +1,28 @@
+{:uriI"®file://app/assets/bower_components/bootstrap-datepicker/docs/_screenshots/markup_input.html?type=text/html&id=b0d608b7ac059881781e4fc8c3eb1fd5c9dbef59004360d6174a3969dd3db9f0:ET:load_pathI" app/assets/bower_components;T:filenameI"Yapp/assets/bower_components/bootstrap-datepicker/docs/_screenshots/markup_input.html;T:	nameI"8bootstrap-datepicker/docs/_screenshots/markup_input;T:logical_pathI"=bootstrap-datepicker/docs/_screenshots/markup_input.html;T:content_typeI"text/html;T:sourceI"H<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="script/common.css">
+        <script src="script/common.js"></script>
+        <script>
+            function setup(){
+                $('input').datepicker({
+                    format: 'mm-dd-yyyy'
+                });
+            }
+        </script>
+    </head>
+    <body data-capture="input, .datepicker">
+        <div class="row">
+            <div class="col-sm-offset-4 col-sm-3">
+                <input type="text" class="form-control" value="02-16-2012">
+            </div>
+        </div>
+    </body>
+</html>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"gfile-digest://app/assets/bower_components/bootstrap-datepicker/docs/_screenshots/markup_input.html;TTF:charsetI"
+utf-8;F:digest"%²°ŠÀC›EOã)ù‹kÇü=›˜Ù<Jú»7l
+¾Ú/:lengthiH:dependencies_digest"%
+òÚõät••QÊÌ#Çß"î'‹­\	6	N4/ãÌ:idI"Eb0d608b7ac059881781e4fc8c3eb1fd5c9dbef59004360d6174a3969dd3db9f0;F:
+mtimel+ýçZ

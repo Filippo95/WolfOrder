@@ -4,4 +4,5 @@ TODOS (Cose da fare)
 -fare una view cassa che mostri tutti i tavoli e se entro dentro a un tavolo faccia il merge delle comande relative al tavolo (ci possono essere più comande per un tavolo ) in più bisogna fare in modo che quando viene cancellato tutto in cassa venga cancellata la comanda e quindi anche le righe comanda
 -nella view bar far vedere tutte le righe comanda che hanno come categoria prodotto "bar"  con relativo tavolo e possibilità di far vedere se sono state consegnate oppure no  quindi se consegnate non farle vedere e viceversa farle vedere cliccare sulla X implica che  siano state consegnate 
 -APP
+-cambiare databse adapter da SQLite3 to MySQL e collegarlo a mysql su ec aws 
 

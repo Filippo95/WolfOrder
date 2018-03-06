@@ -5,9 +5,11 @@ one:
   id_prodotto: 1
   quantit: 1
   modifiche: MyText
+  consegnata: false
 
 two:
   id_comanda: 1
   id_prodotto: 1
   quantit: 1
   modifiche: MyText
+  consegnata: false

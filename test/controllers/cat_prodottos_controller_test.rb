@@ -18,7 +18,7 @@ class CatProdottosControllerTest < ActionController::TestCase
 
   test "should create cat_prodotto" do
     assert_difference('CatProdotto.count') do
-      post :create, cat_prodotto: { desciption: @cat_prodotto.desciption, id_parent: @cat_prodotto.id_parent, nome: @cat_prodotto.nome }
+      post :create, cat_prodotto: { description: @cat_prodotto.description, id_destination: @cat_prodotto.id_destination, id_parent: @cat_prodotto.id_parent, name: @cat_prodotto.name }
     end
 
     assert_redirected_to cat_prodotto_path(assigns(:cat_prodotto))
@@ -35,7 +35,7 @@ class CatProdottosControllerTest < ActionController::TestCase
   end
 
   test "should update cat_prodotto" do
-    patch :update, id: @cat_prodotto, cat_prodotto: { desciption: @cat_prodotto.desciption, id_parent: @cat_prodotto.id_parent, nome: @cat_prodotto.nome }
+    patch :update, id: @cat_prodotto, cat_prodotto: { description: @cat_prodotto.description, id_destination: @cat_prodotto.id_destination, id_parent: @cat_prodotto.id_parent, name: @cat_prodotto.name }
     assert_redirected_to cat_prodotto_path(assigns(:cat_prodotto))
   end
 
