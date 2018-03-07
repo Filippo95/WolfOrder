@@ -23,8 +23,8 @@
   <%= @prodotto.prezzo %>
 </p>
 
-<%= link_to 'Edit', edit_prodotto_path(@prodotto) %> |
-<%= link_to 'Back', prodottos_path %>
+<%= link_to 'Edit', edit_prodotto_path(@prodotto), class: "btn btn-warning" %> |
+<%= link_to 'Back', prodottos_path , class: "btn btn-default"%>
 <script>
    $(document).ready(function () {
      

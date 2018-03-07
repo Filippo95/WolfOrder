@@ -44,7 +44,7 @@
         <div class="modal-body">
           <form class="new_riga_comanda" id="new_riga_comanda" action="/riga_comandas" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="MjsjR5uXLQ1s+7UKkSf46Rpi8GMPcSY7sc9Wfp/5/xKeLl3qqiu4Lu26737twwmJEpzg7V87s9TBHognDcuonw==">
             <div class="field">
-              <label for="riga_comanda_id_comanda">Id comanda</label><br>
+            <br>
               <input type="hidden" name="riga_comanda[id_comanda]" id="riga_comanda_id_comanda" value='<%= @comanda.id %>'>
             </div>
             <div class="field">
@@ -60,7 +60,7 @@
 
             <div class="field">
               <label for="riga_comanda_quantit">Quantità</label><br>
-              <input type="number" name="riga_comanda[quantit]" id="riga_comanda_quantit">
+              <input type="number" name="riga_comanda[quantit]" id="riga_comanda_quantit" value="1">
             </div>
             <div class="field">
               <label for="riga_comanda_modifiche">Modifiche</label><br>

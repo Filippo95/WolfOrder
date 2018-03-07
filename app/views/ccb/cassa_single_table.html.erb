@@ -50,7 +50,7 @@
 
 <span><span ><font size="30">Totale: </font> </span><font size="25" id="tot"></font><font size="25" >€</font></span>
 <br><br>
-<a  class="btn btn-danger btn-lg">Segnala come Pagato </a>
+<a id="pagato" href="" class="btn btn-danger btn-lg">Segnala come Pagato </a>
     <script>
 $( document ).ready(function() {
 
@@ -104,6 +104,7 @@ $.ajax({
                             
                             $("#tot").html(tot);
                         });
+                        $("#pagato").attr("href", "/ccb/destroy_table?id="+table)
 
 
 
