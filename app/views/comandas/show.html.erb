@@ -22,6 +22,7 @@
   <th>Prodotto</th>
    <th>Modifiche</th>
   <th>Quantità</th>
+  <th></th>
   <tbody id="tabbody">
     
   </tbody>
@@ -157,7 +158,7 @@ var prodotti=$.ajax({
                                 {
                                     if(prodotti[k].id==o[i].id_prodotto)
                                     {
-                                          $('#tabbody').append('<tr><td>' + prodotti[k].nome + '</td><td>' + o[i].modifiche + '</td><td>' + o[i].quantit + '</td></tr> ');
+                                          $('#tabbody').append('<tr><td>' + prodotti[k].nome + '</td><td>' + o[i].modifiche + '</td><td>' + o[i].quantit + '</td><td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" class="btn btn-danger" href="/riga_comandas/'+o[i].id+'">Destroy</a></td></tr> ');
                          
                                     }
                                 }
