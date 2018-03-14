@@ -10,7 +10,7 @@ class CcbController < ApplicationController
   end
  def cassa_single_table
    
-    sql = "Select comandas.tavolo,prodottos.nome,prodottos.prezzo,riga_comandas.quantit,riga_comandas.consegnata FROM comandas,riga_comandas,prodottos WHERE comandas.id=riga_comandas.id_comanda AND riga_comandas.id_prodotto=prodottos.id "
+    sql = "Select comandas.tavolo,prodottos.nome,prodottos.prezzo,riga_comandas.quantit,riga_comandas.consegnata,riga_comandas.id FROM comandas,riga_comandas,prodottos WHERE comandas.id=riga_comandas.id_comanda AND riga_comandas.id_prodotto=prodottos.id "
    
     records_array = ActiveRecord::Base.connection.execute(sql)
   

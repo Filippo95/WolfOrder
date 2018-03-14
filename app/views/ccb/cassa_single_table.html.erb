@@ -94,7 +94,7 @@ $.ajax({
                                         consegnato="Non Consegnato"
                                     }
                                     
-                                $('#tab3').append('<tr><td>' +o[i][1]+ '</td><td>' +o[i][2]+ '</td><td>' +o[i][3]+ '</td><td>'+o[i][2]*o[i][3]+'</td><td>' +consegnato+ '</td></tr> ')
+                                $('#tab3').append('<tr><td>' +o[i][1]+ '</td><td>' +o[i][2]+ '</td><td>' +o[i][3]+ '</td><td>'+o[i][2]*o[i][3]+'</td><td>' +consegnato+ '</td><td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" class="btn btn-danger" href="/riga_comandas/'+o[i][5]+'">Destroy</a></td></tr> ')
                                 tot+=o[i][2]*o[i][3];
                                 }
                             
