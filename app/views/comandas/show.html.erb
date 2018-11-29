@@ -15,159 +15,196 @@
   <strong>Tavolo:</strong>
   <%= @comanda.tavolo %>
 </p>
-
+<p>
+  <strong>Comanda:</strong>
+  <p id=comanda><%= @comanda.id %></p>
+</p>
+<button type="button" class="btn btn-secondary btn-lg" onClick="Ricapitola()">Ricapitola</button>
 
 
 <table class="table" id="table">
+    <thead> 
+    
   <th>Prodotto</th>
+
+   <th>Quantità</th>
    <th>Modifiche</th>
-  <th>Quantità</th>
-  <th></th>
+ 
+      <th></th>
+    </thead>
+ 
   <tbody id="tabbody">
     
   </tbody>
 </table>
- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalP">
-       Aggiungi riga
-     </button>
 
+<script  >
+(function ( $ ) {
 
+	$.fn.bootstrapNumber = function( options ) {
 
- <div class="modal fade" id="exampleModalP" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-     <div class="modal-dialog" role="document">
-       <div class="modal-content">
-         <div class="modal-header">
-           <h5 class="modal-title" id="exampleModalLabel">Seleziona Prodotto</h5>
-           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-             <span aria-hidden="true">&times;</span>
-           </button>
-         </div>
-        <div class="modal-body">
-          <form class="new_riga_comanda" id="new_riga_comanda" action="/riga_comandas" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="MjsjR5uXLQ1s+7UKkSf46Rpi8GMPcSY7sc9Wfp/5/xKeLl3qqiu4Lu26737twwmJEpzg7V87s9TBHognDcuonw==">
-            <div class="field">
-            <br>
-              <input type="hidden" name="riga_comanda[id_comanda]" id="riga_comanda_id_comanda" value='<%= @comanda.id %>'>
-            </div>
-            <div class="field">
-              <label for="riga_comanda_id_prodotto"> Prodotto</label><br>            
-            <input type="text" id="prodotto_mane">
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalPr">
-       Aggiungi Prodotto
-     </button>
+		var settings = $.extend({
+			upClass: 'default',
+			downClass: 'default',
+			upText: '+',
+			downText: '-',
+			center: true
+			}, options );
 
-    
-            </div>
-            <input type="hidden" name="riga_comanda[id_prodotto]" id="riga_comanda_id_prodotto">
+		return this.each(function(e) {
+			var self = $(this);
+			var clone = self.clone(true, true);
 
-            <div class="field">
-              <label for="riga_comanda_quantit">Quantità</label><br>
-              <input type="number" name="riga_comanda[quantit]" id="riga_comanda_quantit" value="1">
-            </div>
-            <div class="field">
-              <label for="riga_comanda_modifiche">Modifiche</label><br>
-              <textarea name="riga_comanda[modifiche]" id="riga_comanda_modifiche"></textarea>
-            </div>
-            <div class="field">
-              <label for="riga_comanda_consegnata"></label><br>
-              <input name="riga_comanda[consegnata]" type="hidden" value="0">
-            </div>
-            <div class="actions">
-              <input type="submit" name="commit" value="Create Riga comanda">
-            </div>
-          </form>
-         </div>
-       </div>
-     </div>
-   </div>
- <div class="modal fade" id="exampleModalPr" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-     <div class="modal-dialog" role="document">
-       <div class="modal-content">
-         <div class="modal-header">
-             
-           <h5 class="modal-title" id="exampleModalLabel">Seleziona Prodotto</h5>
-           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-             <span aria-hidden="true">&times;</span>
-           </button>
-         </div>
-        
-         <div class="modal-body">
-           <table id="prodotto" class="display" cellspacing="0" width="100%">
-           <thead>
-               <tr>
-                   <th>Nome</th>
-                   <th>prezzo</th>
-                   <th></th>
+			var min = self.attr('min');
+			var max = self.attr('max');
+			var step = parseInt(self.attr('step')) || 1;
 
-               </tr>
-           </thead>
+			function setText(n) {
+				if (isNaN(n) || (min && n < min) || (max && n > max)) {
+					return false;
+				}
 
-           <tbody id="prodottobody">
+				clone.focus().val(n);
+				clone.trigger('change');
+				return true;
+			}
 
-           </tbody>
-       </table>
-         </div>
+			var group = $("<div class='input-group'></div>");
+			var down = $("<button type='button'>" + settings.downText + "</button>").attr('class', 'btn btn-' + settings.downClass).click(function() {
+				setText(parseInt(clone.val() || clone.attr('value')) - step);
+			});
+			var up = $("<button type='button'>" + settings.upText + "</button>").attr('class', 'btn btn-' + settings.upClass).click(function() {
+				setText(parseInt(clone.val() || clone.attr('value')) + step);
+			});
+			$("<span class='input-group-btn'></span>").append(down).appendTo(group);
+			clone.appendTo(group);
+			if(clone && settings.center) {
+				clone.css('text-align', 'center');
+			}
+			$("<span class='input-group-btn'></span>").append(up).appendTo(group);
 
-       </div>
-     </div>
-   </div>
-    <script>
-         function ProdottosDispose( id, nome){
-             console.log(id);
-             $('#prodotto_mane').val(nome);
-             $('#riga_comanda_id_prodotto').val(id);
-             
-             $('#exampleModalPr').hide();
-             console.log("finito")
-         }
-                   $(document).ready(function () {
+			// remove spins from original
+			clone.prop('type', 'text').keydown(function(e) {
+				if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
+					(e.keyCode == 65 && e.ctrlKey === true) ||
+					(e.keyCode >= 35 && e.keyCode <= 39)) {
+					return;
+				}
+				if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+					e.preventDefault();
+				}
 
-                   $.ajax({
-                       url: "/prodottos.json",
-                       dataType: "json",
-                       timeout: 800000,
-                       cache: true}).done(function (o) {
-                       
-                       for (var i = 0; i < o.length; i++)
-                       {
-                          $('#prodottobody').append('<tr><td>' + o[i].nome + '</td><td>' + o[i].prezzo + '</td>><td>  <button type="button"  class="btn btn-primary" onClick="ProdottosDispose(\''+o[i].id+'\',\''+o[i].nome+'\')">Seleziona</button></td></tr> ');
-                        }
-                        
-                       $('#prodotto').DataTable();
-                   });
-               });
-             
-           </script>
+				var c = String.fromCharCode(e.which);
+				var n = parseInt(clone.val() + c);
+
+				if ((min && n < min) || (max && n > max)) {
+					e.preventDefault();
+				}
+			});
+
+			self.replaceWith(group);
+		});
+	};
+} ( jQuery ));</script>
+
+ 
+
            <script>
-    $(document).ready(function () {
-var prodotti=$.ajax({
-        url:"/prodottos.json" ,
-        async: false,
-        dataType: 'json'
-    }).responseJSON;
+
   
                       $.ajax({
-                          url: "/riga_comandas.json",
+                          url: "/prodottos.json",
                           dataType: "json",
                           timeout: 800000,
                           cache: true}).done(function (o) {
                           for (var i = 0; i < o.length; i++)
                           {
-                            if(o[i].id_comanda=="<%= @comanda.id %>")
-                            {
-                                for(var k=0; k<prodotti.length; k++)
-                                {
-                                    if(prodotti[k].id==o[i].id_prodotto)
-                                    {
-                                          $('#tabbody').append('<tr><td>' + prodotti[k].nome + '</td><td>' + o[i].modifiche + '</td><td>' + o[i].quantit + '</td><td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" class="btn btn-danger" href="/riga_comandas/'+o[i].id+'">Destroy</a></td></tr> ');
-                         
-                                    }
-                                }
-                                
-                             }
+                           
+                             $('#tabbody').append('<tr><td class="name">' + o[i].nome + '</td><td><input type="number" size="4" value=0 class="qty" ></td><td><input type="text" size="10" value="" class="txt"></td><td><input type="hidden" class="id" value="'+o[i].id+'"></td></tr> ');
+                             
+                             
                          }
-                          $('#tabprodotti').DataTable();
+                          var table=$('#table').DataTable({
+                              "paging": false
+                          });
                           
+                            $('.qty').bootstrapNumber();
                       });
-    });
+
+  
+
+
+
+
+function Ricapitola() {  
+    $('#table2').find("tr:gt(0)").remove();
     
+    $('#table > tbody  > tr').each(function() {
+        if($(this).find('.qty').val() >0)
+        {
+            console.log($(this).find('.name').html()+" -"+$(this).find('.qty').val()+"-"+$(this).find('.txt').val()+"-"+$(this).find('.id').val());
+          
+            $('#ricap').append("<tr><td>"+$(this).find('.name').html()+"<td><td>"+$(this).find('.qty').val()+"<td><td>"+$(this).find('.txt').val()+"<td></tr>");
+        }
+    });
+    $("#myModal").modal()
+ 
+}
+function Invia() {
+       $('#table > tbody  > tr').each(function() {
+        if($(this).find('.qty').val() >0)
+        {
+            console.log($(this).find('.name').html()+" -"+$(this).find('.qty').val()+"-"+$(this).find('.txt').val()+"-"+$(this).find('.id').val());
+         $.ajax({
+    type: 'POST',
+    // make sure you respect the same origin policy with this url:
+    // http://en.wikipedia.org/wiki/Same_origin_policy
+    url: '/riga_comandas',
+    data: { 
+        'riga_comanda[id_comanda]': $("#comanda").html(), 
+        'riga_comanda[id_prodotto]': $(this).find('.id').val() ,
+        'riga_comanda[quantit]':$(this).find('.qty').val(),
+        'riga_comanda[modifiche]':$(this).find('.txt').val()
+    }
+    
+});
+         
+         
+          }
+    });
+ 
+}
 </script>
+<style>
+input[type="number"] {
+   width:20px;
+}
+</style>
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Ricapitolando: </h4>
+        </div>
+        <div class="modal-body">
+            <table class="table" id="table2">
+                <th>Nome</th>
+                <th>Qtà</th>
+                <th>Modifiche</th>
+                <tbody id="ricap">
+                    
+                </tbody>
+            </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          
+<button type="button" class="btn btn-primary btn-lg" onClick="Invia()">Invia </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
