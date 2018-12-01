@@ -1,13 +1,9 @@
 Rails.application.routes.draw do
   
   
-  authenticated :user do
-    root to: 'prodottos#index', as: :authenticated_root
-  end
-  root to: redirect('/users/sign_in')
+root to: 'prodottos#index'
  
   
-  devise_for :users
   resources :riga_comandas
   resources :prodottos
   resources :cat_prodottos
