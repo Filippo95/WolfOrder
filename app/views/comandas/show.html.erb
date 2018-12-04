@@ -155,15 +155,18 @@ function Invia() {
         if($(this).find('.qty').val() >0)
         {
             console.log($(this).find('.name').html()+" -"+$(this).find('.qty').val()+"-"+$(this).find('.txt').val()+"-"+$(this).find('.id').val());
+         
          $.ajax({
     type: 'POST',
     // make sure you respect the same origin policy with this url:
     // http://en.wikipedia.org/wiki/Same_origin_policy
     url: '/riga_comandas',
     data: { 
+        
         'riga_comanda[id_comanda]': $("#comanda").html(), 
         'riga_comanda[id_prodotto]': $(this).find('.id').val() ,
         'riga_comanda[quantit]':$(this).find('.qty').val(),
+        'riga_comanda[consegnata]': 0,
         'riga_comanda[modifiche]':$(this).find('.txt').val()
     }
     
